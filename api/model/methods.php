@@ -23,4 +23,21 @@ class Method
         return $datos;
 
     }
+
+    public function getId($tabla,$campo,$id)
+    {
+        $Cn = new Connection();
+        $sql = "SELECT * FROM $tabla WHERE $campo=$id";
+        $query = $Cn->query($sql);
+        if (!$query) {
+            die("Error de consulta: " . mysqli_error($Cn));
+        }
+        $datos = array();
+
+        while ($fila = mysqli_fetch_assoc($query)) {
+            $datos[] = $fila;
+        }
+        return $datos;
+
+    }
 }
