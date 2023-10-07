@@ -2,7 +2,7 @@
 try {
   	class Connection extends mysqli {
 		public function __construct(){ 
-			parent::__construct('127.0.0.1','admin','brickman','sdinfco_sdcredit');
+			parent::__construct('sdinformaticapy.com','sdinfco_admin','brickman2017','sdinfco_sdcredit');
 			$this->query("SET NAMES 'utf8';");
 			unset($x);
 		}	
