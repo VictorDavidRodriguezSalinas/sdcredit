@@ -6,17 +6,6 @@ class Method
     public function __construct()
     {
     }
-    public function listarTablaJson($tabla)
-    {
-        $lista = [];
-        $Cn = new Connection();
-        $sql = "SELECT * FROM $tabla";
-        $query = $Cn->query($sql);
-        while ($dat = mysqli_fetch_assoc($query)) {
-            $this->$lista[] = $dat;
-        }
-        return $this->$lista;
-    }
 
     public function getAll($tabla)
     {
