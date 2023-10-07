@@ -27,6 +27,8 @@ switch ($method) {
             echo $json;
         }
         break;
+    case 'POST':
+        
     default:
         http_response_code(405); // Método no permitido
         echo json_encode(['error' => 'Método no permitido']);
