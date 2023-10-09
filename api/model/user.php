@@ -6,7 +6,7 @@ class User{
 	public string $logusu;
 	public string $clausu;
 	public string $nivusu;
-	public string $idest;
+	public string $idsuc;
 
 	public function __construct(
 		string $idusu,
@@ -15,7 +15,7 @@ class User{
 		string $logusu,
 		string $clausu,
 		string $nivusu,
-		string $idest
+		string $idsuc
 	) {
 		$this->idusu = $idusu;
 		$this->docusu = $docusu;
@@ -23,7 +23,7 @@ class User{
 		$this->logusu = $logusu;
 		$this->clausu = $clausu;
 		$this->nivusu = $nivusu;
-		$this->idest = $idest;
+		$this->idsuc = $idsuc;
 	}
 
 	public function getIdusu(): string
@@ -56,9 +56,9 @@ class User{
 		return $this->nivusu;
 	}
 
-	public function getIdest(): string
+	public function getIdsuc(): string
 	{
-		return $this->idest;
+		return $this->idsuc;
 	}
 
 	public function setIdusu(string $idusu): self
@@ -97,9 +97,9 @@ class User{
 		return $this;
 	}
 
-	public function setIdest(string $idest): self
+	public function setIdsuc(string $idsuc): self
 	{
-		$this->idest = $idest;
+		$this->idsuc = $idsuc;
 		return $this;
 	}
 	

@@ -40,4 +40,15 @@ class Method
         return $datos;
 
     }
+
+    public function Insertar($sql,$procedure){
+        $Cn=new Connection();
+        $dato="CALL $procedure($sql)";
+        $query=$Cn->query($dato);
+        
+    
+    }
+
+
+
 }
