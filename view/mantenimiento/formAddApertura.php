@@ -11,8 +11,8 @@
               </div>
               <form id="quickForm">
                 <div class="card-body"> 
-                    <input type="text" name="txtidapc" id="txtidapc" class="form-control" value="0" placeholder="ID"  hidden>
-                    <input type="text" name="txtOPE" id="txtOPE" class="form-control" placeholder="OPE" value="GUA" hidden >
+                    <input type="text" name="txtidapc" id="txtidapc" class="form-control" value="0" placeholder="ID"  >
+                    <input type="text" name="txtOPE" id="txtOPE" class="form-control" placeholder="OPE" value="GUA"  >
                  
                 <div class="col-lg-12">
 									<label class="col-form-label"></i> Monto inicial: </label>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="card-footer">
                 <button type="submit" id="btnGuardar" class="btn btn-outline-success"><i class="fas fa-save"></i> Guardar</button> 
-                 <button onclick='location.href="/cattle/dashboard"' class="btn btn-outline-danger"><i class="fas fa-times-circle"></i> Cerrar</button>
+                 <button onclick='location.href="/sdcredit/dashboard"' class="btn btn-outline-danger"><i class="fas fa-times-circle"></i> Cerrar</button>
                 </div>
               </form>
             </div>

@@ -111,7 +111,7 @@ $('#frmAddApertura').submit(function(e){
 			data: $('#frmAddApertura').serialize(),
 			success: function(res){
 				var js= JSON.parse(res);
-				console.log((js.texto));
+				console.log((js.estado));
 				if (js.estado=='no') {
 			
 					swal({title: "Ya existe otra caja aperturada",text: "",icon: "warning",timer: "1250",}); 
