@@ -25,7 +25,7 @@
 
 								<div class="col-lg-12">
 									<label class="col-form-label"></i> Apellido (*): </label>
-									<input type="text" name="txtApeCli" id="txtNomCli"class="form-control" required>
+									<input type="text" name="txtApeCli" id="txtApeCli"class="form-control" required>
 								</div>
 
 								<div class="col-lg-12">

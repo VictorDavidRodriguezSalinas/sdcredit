@@ -26,7 +26,8 @@ function verificarCaja() {
 
 
 function listApertura() {
-				param = "'LIS'";
+	var param =  document.getElementById("txtIdUsu").value;
+				
 				procedure="lis_apertura";
 				$.fn.dataTable.ext.errMode = 'throw';
 				tablaApertura = $('#tabApertura').DataTable({  

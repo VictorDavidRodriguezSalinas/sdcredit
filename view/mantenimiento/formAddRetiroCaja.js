@@ -3,7 +3,8 @@ $(function(){
 	listRetiroCaja();
 });
 function listRetiroCaja() {
-	param = "'LIS'";
+
+	var param =  document.getElementById("txtIdUsu").value;
 	procedure="lis_retiro";
 				$.fn.dataTable.ext.errMode = 'throw';
 				tablaRetiroCaja = $('#tabRetiroCaja').DataTable({  

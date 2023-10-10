@@ -1,20 +1,19 @@
 <?php
 require_once('../model/metodos.php');
 $idcli = (isset($_POST['txtidcli'])) ? $_POST['txtidcli'] : '0';
-$ope = (isset($_POST['txtOPE'])) ? $_POST['txtOPE'] : 'GUA';
+$ope = (isset($_POST['txtOPE'])) ? $_POST['txtOPE'] : '';
 $ruccli = (isset($_POST['txtRucCli'])) ? $_POST['txtRucCli'] : '0';
 $nomcli = (isset($_POST['txtNomCli'])) ? $_POST['txtNomCli'] : '';
 $apecli = (isset($_POST['txtApeCli'])) ? $_POST['txtApeCli'] : '';
 $telcli = (isset($_POST['txtTelCli'])) ? $_POST['txtTelCli'] : '';
 
-$usuario = $_SESSION['nomusu'];
-
+$usuario =(isset($_SESSION['nomusu'])) ? $_SESSION['nomusu'] : '';
 
 
 
 if ($ope == 'ELI') :
 	$Cn = new Conexion();
-	$sql = "SELECT * FROM ventas WHERE idcli='$idcli'";
+	$sql = "SELECT * FROM cuotas WHERE idcli='$idcli'";
 	$query = $Cn->query($sql);
 	$fil = $query->num_rows;
 	if ($fil > 0) :

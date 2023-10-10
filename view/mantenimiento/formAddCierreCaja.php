@@ -9,6 +9,7 @@
 							<div class="card card-success">
 								<div class="card-header">
 									<h3 class="card-title">Cierre de Caja</h3>
+									<input hidden type="text" id="txtIdUsu" value="<?php echo $_SESSION['idusu'] ?>"> </input>
 								</div>
 								<div class="card-body">
 									<div class="table-responsive">

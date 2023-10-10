@@ -133,8 +133,7 @@ session_start();
                     require "dashboard.php";
                     break;
                   case 'adduser':
-                    echo 'logincorrecto';
-                    require "view/user/formAddUser.php";
+                    require "view/mantenimiento/formAddUser.php";
                     break;
                   case 'addCategoria':
                     require "view/mantenimiento/formAddCategoria.php";

@@ -12,6 +12,7 @@
               <form id="quickForm">
                 <div class="card-body"> 
                     <input type="text" name="txtidapc" id="txtidapc" class="form-control" value="0" placeholder="ID"  hidden>
+                    <input type="text" name="txtIdUsu" id="txtIdUsu" class="form-control" value="<?php echo $_SESSION['idusu']; ?>"  hidden >
                     <input type="text" name="txtOPE" id="txtOPE" class="form-control" placeholder="OPE" value="GUA"  hidden>
                  
                 <div class="col-lg-12">

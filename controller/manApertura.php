@@ -1,10 +1,10 @@
 <?php
-	require_once('../model/metodos.php');
+require_once('../model/metodos.php');
 $idapc = (isset($_POST['txtidapc'])) ? $_POST['txtidapc'] : '0';
-   $ope = (isset($_POST['txtOPE'])) ? $_POST['txtOPE'] : 'GUA';
-   $monini = (isset($_POST['txtMonIni'])) ? $_POST['txtMonIni'] : '0';
-   $monapc = (isset($_POST['txtMonApc'])) ? $_POST['txtMonApc'] : '';
-       $idusu=$_SESSION['idusu'];
+$ope = (isset($_POST['txtOPE'])) ? $_POST['txtOPE'] : 'GUA';
+$monini = (isset($_POST['txtMonIni'])) ? $_POST['txtMonIni'] : '0';
+$monapc = (isset($_POST['txtMonApc'])) ? $_POST['txtMonApc'] : '';
+$idusu=$_SESSION['idusu'];
 
 
 $Cn=new Conexion();
@@ -29,5 +29,3 @@ else{
                   );
              echo json_encode($arr, JSON_FORCE_OBJECT);  
 }
-
-?>

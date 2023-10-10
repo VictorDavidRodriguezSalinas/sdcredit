@@ -1,5 +1,5 @@
 <?php
-    $tab=$_GET['opcion'];
+    $tab=$_POST['opcion'];
     require_once('../model/metodos.php');
     $cli=new Metodo();
     $datos=$cli->listarTablaJson($tab);

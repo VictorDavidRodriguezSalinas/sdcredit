@@ -13,7 +13,7 @@
                 <div class="card-body"> 
                     <input type="text" name="txtidret" id="txtidret" class="form-control" value="0" placeholder="ID"  hidden>
                     <input type="text" name="txtOPE" id="txtOPE" class="form-control" placeholder="OPE" value="GUA" hidden >
-
+                    <input type="text" name="txtIdUsu" id="txtIdUsu" class="form-control" value="<?php echo $_SESSION['idusu']; ?>" hidden  >
                 <div class="col-lg-12">
 									<label class="col-form-label"></i> Motivo: </label>
 									<input type="text" name="txtMotRet" id="txtMotRet" min="1" class="form-control" required>

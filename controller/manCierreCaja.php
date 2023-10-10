@@ -1,8 +1,14 @@
 <?php
 	require_once('../model/metodos.php');
-   $ope ='GUA';
+	
+   $idusu=$_POST['idusu'];
   
-	$texto="'$ope'";
+	
 	$cli=new Metodo();
-	$reg=$cli->Insertar($texto,'man_cierre');
+	$reg=$cli->Insertar($idusu,'man_cierre');
+	$arr = array(
+		'estado' => 'ok',
+		'idusu' => $idusu
+	);
+	echo json_encode($arr, JSON_FORCE_OBJECT);
 ?>
