@@ -1,4 +1,4 @@
-<body class="hold-transition sidebar-mini">
+<!-- <body class="hold-transition sidebar-mini">
   <section class="content">
     <div class="container-fluid">
       <div class="row">
@@ -155,4 +155,4 @@
     });
   </script>
 
-</body>
+</body> -->

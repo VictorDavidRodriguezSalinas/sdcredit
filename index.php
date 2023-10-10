@@ -83,7 +83,7 @@ session_start();
 
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="icons/iconofi48.png" height="60" width="60">
+      <img class="animation__shake" src="icons/logo.png" height="60" width="60">
     </div>
 
     <?php include_once 'navbar.php'; ?>
