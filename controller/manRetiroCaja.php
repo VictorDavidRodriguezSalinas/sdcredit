@@ -5,12 +5,12 @@
   $idret = (isset($_POST['txtidret'])) ? $_POST['txtidret'] : '0';
   $monret = (isset($_POST['txtMonRet'])) ? $_POST['txtMonRet'] : '0';
 	$motret = (isset($_POST['txtMotRet'])) ? $_POST['txtMotRet'] : '';
-
+	$idusu=$_SESSION['idusu'];
 	$usuario=$_SESSION['nomusu'];
-	$texto="'$idret',"."'$monret',"."'$usuario',"."'$motret',"."'$ope'";
+	$texto="'$idret',"."'$monret',"."'$usuario',"."'$motret',"."'$idusu',"."'$ope'";
 
 $Cn=new Conexion();
-$sql="SELECT monapc-monret as mondis FROM apertura WHERE estapc=1";
+$sql="SELECT monapc-monret as mondis FROM apertura WHERE estapc=1 and idusu=$idusu";
 $query=$Cn->query($sql);
 $fil=$query->num_rows;
 if($fil==1){
