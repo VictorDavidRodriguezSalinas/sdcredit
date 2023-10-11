@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+$fechaActual= date("d-m-Y");
 
 ?>
 <!DOCTYPE html>
@@ -115,13 +115,13 @@ session_start();
       <section class="content">
         <div class="container-fluid">
           <?php
-       
-          
+
+
           if (isset($_SESSION['login'])) {
             if ($_SESSION['login'] == 'ok') {
-              
+
               if (isset($_GET['page'])) {
-             
+
                 switch ($_GET['page']) {
                   case '':
                     require "dashboard.php";
@@ -135,34 +135,8 @@ session_start();
                   case 'adduser':
                     require "view/mantenimiento/formAddUser.php";
                     break;
-                  case 'addCategoria':
-                    require "view/mantenimiento/formAddCategoria.php";
-                    break;
-                  case 'Raza':
-                    require "view/mantenimiento/formAddRaza.php";
-                    break;
-                  case 'Lote':
-                    require "view/mantenimiento/formAddLote.php";
-                    break;
-                  case 'Ubicacion':
-                    require "view/mantenimiento/formAddUbicacion.php";
-                    break;
-                  case 'Colores':
-                    require "view/mantenimiento/formAddColor.php";
-                    break;
-                  case 'TipoCaravana':
-                    require "view/mantenimiento/formAddTipoCaravana.php";
-                    break;
-                  case 'Estancia':
-                    require "view/mantenimiento/formAddEstancia.php";
-                    break;
-                  case 'Ganado':
-
-                    require "view/mantenimiento/formAddAnimal.php";
-                    break;
-                  case 'Campo':
-
-                    require "view/actividades/formAddActividades.php";
+                    case 'credito':
+                    require "view/mantenimiento/formAddCuotas.php";
                     break;
                   case 'Auditoria':
                     require "view/mantenimiento/formAuditoria.php";
@@ -179,12 +153,7 @@ session_start();
                   case 'Cierres':
                     require "view/mantenimiento/formLisCierreCaja.php";
                     break;
-                  case 'Venta':
-                    require "view/ventas/formAddVentas.php";
-                    break;
-                  case 'Ventas':
-                    require "view/ventas/formLisVentas.php";
-                    break;
+
                   case 'Cliente':
                     require "view/mantenimiento/formAddCliente.php";
                     break;
@@ -194,12 +163,10 @@ session_start();
                   case 'Buckup':
                     require "view/mantenimiento/formBuckup.php";
                     break;
-                    case 'VentasGanado':
-                      require "view/ventas/formDetalleVentas.php";
-                      break;
-                      case 'Retiro':
-                        require "view/mantenimiento/formAddRetiroCaja.php";
-                        break;
+
+                  case 'Retiro':
+                    require "view/mantenimiento/formAddRetiroCaja.php";
+                    break;
                 }
               } else {
                 require "login.php";

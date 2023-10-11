@@ -83,7 +83,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="Venta" class="nav-link">
+              <a href="credito" class="nav-link">
                 <i class="fas fa-check-double nav-icon"></i>
                 <p>Registrar crédito </p>
               </a>
