@@ -1,6 +1,7 @@
 
 $(function () {
 	listCliente();
+	cargarUsuarios();
 });
 function listCliente() {
 	param = "'LIS'";
@@ -115,7 +116,7 @@ $(document).on("click", ".btnEditar", function (e) {
 	nomid = "idcli";
 	$.ajax({
 		url: 'controller/listarTablaId.php',
-		type: 'GET',
+		type: 'POST',
 		data: { nomtab: nomtab, nomid: nomid, id: id },
 		success: function (res) {
 			console.log('success:', res);
@@ -129,6 +130,8 @@ $(document).on("click", ".btnEditar", function (e) {
 				$("#txtNomCli").val(js[i].nomcli);
 				$("#txtApeCli").val(js[i].apecli);
 				$("#txtTelCli").val(js[i].telcli);
+				$("#dtcUSU").val(js[i].idusu);
+				
 			}
 		}
 	});
@@ -186,3 +189,18 @@ $(document).on("click", ".btnBorrar", function (e) {
 		});
 
 });
+
+function cargarUsuarios() {
+    $.ajax({
+        url: 'controller/listarTabla.php',
+        type: 'POST',
+        data: {opcion:'usuario'},
+        success: function(res){
+          var js= JSON.parse(res);
+            for (var i = 0; i < js.length; i++) {
+              $("#dtcUSU").append('<option value="'+js[i].idusu+'">'+js[i].nomusu+'</option>');
+            }
+          
+        }
+      });   
+}

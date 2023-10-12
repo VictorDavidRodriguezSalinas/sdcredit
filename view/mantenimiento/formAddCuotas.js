@@ -9,12 +9,6 @@ $(function () {
 
 //GUARDAR DATOS
 $('#cmdGuardar').click(function (e) {
-    numven = document.getElementById("txtNumVen").value;
-    fecven = document.getElementById("txtFecVen").value;
-
-    // if (numven == '') { swal({ title: "Ingrese número de venta !!!", text: "", icon: "warning", timer: "1200", }); document.getElementById("txtNumVen").focus(); throw ''; }
-    // if (fecven == '') { swal({ title: "Ingrese fecha de venta !!!", text: "", icon: "warning", timer: "1200", }); document.getElementById("txtFecVen").focus(); throw ''; }
-    // if (cont == 0) { swal({ title: "Ingrese detalles de venta !!!", text: "", icon: "warning", timer: "1200", }); throw ''; }
 
     e.preventDefault();
     var formDatos = new FormData($("#frmAddCuotas")[0]);

@@ -6,6 +6,8 @@ $ruccli = (isset($_POST['txtRucCli'])) ? $_POST['txtRucCli'] : '0';
 $nomcli = (isset($_POST['txtNomCli'])) ? $_POST['txtNomCli'] : '';
 $apecli = (isset($_POST['txtApeCli'])) ? $_POST['txtApeCli'] : '';
 $telcli = (isset($_POST['txtTelCli'])) ? $_POST['txtTelCli'] : '';
+$idusuario = (isset($_POST['dtcUSU'])) ? $_POST['dtcUSU'] : '';
+
 
 $usuario =(isset($_SESSION['nomusu'])) ? $_SESSION['nomusu'] : '';
 
@@ -45,7 +47,7 @@ elseif ($ope=='GUA') :
 		);
 		echo json_encode($arr, JSON_FORCE_OBJECT);
 	} else {
-		$texto = "'$idcli'," . "'$ruccli'," . "'$nomcli'," . "'$apecli'," . "'$telcli'," . "'$ope'";
+		$texto = "'$idcli'," . "'$ruccli'," . "'$nomcli'," . "'$apecli'," . "'$telcli',". "'$idusuario'," . "'$ope'";
 		$cli = new Metodo();
 		$reg = $cli->Insertar($texto, 'man_cliente');
 		$arr = array(
@@ -56,7 +58,7 @@ elseif ($ope=='GUA') :
 	}
 
 	elseif ($ope=='EDI') :
-			$texto = "'$idcli'," . "'$ruccli'," . "'$nomcli'," . "'$apecli'," . "'$telcli'," . "'$ope'";
+			$texto = "'$idcli'," . "'$ruccli'," . "'$nomcli'," . "'$apecli'," . "'$telcli'," . "'$idusuario',". "'$ope'";
 			$cli = new Metodo();
 			$reg = $cli->Insertar($texto, 'man_cliente');
 			$arr = array(

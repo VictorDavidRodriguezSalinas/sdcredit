@@ -6,4 +6,7 @@
     $cli=new Metodo();
     $datos=$cli->listarTablaJson("$tab WHERE $nomid=$id");
     echo json_encode($datos); 
+//    $res = array(
+//     'response' => 'Se requiere Petición POST'
+//   );
 ?>

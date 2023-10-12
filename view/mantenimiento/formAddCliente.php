@@ -34,6 +34,13 @@
                       <input type="text" name="txtTelCli" id="txtTelCli" class="form-control" required>
                     </div>
 
+                    <div class="col-lg-12">
+                      <label class="col-form-label"></i> Cobrador (*): </label>
+                      <select id="dtcUSU" name="dtcUSU" class="form-control" style="width: 100%;">
+                      </select>
+                    </div>
+
+
                   </div>
                   <div class="card-footer">
                     <button type="submit" id="btnGuardar" class="btn btn-outline-success"><i class="fas fa-save"></i> Guardar</button>
