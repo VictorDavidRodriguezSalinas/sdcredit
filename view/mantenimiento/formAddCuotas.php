@@ -19,11 +19,11 @@
                                         <div class="col-lg-3">
                                             <label class="col-form-label"></i>Ruc (*): </label>
                                             <div class="input-group-prepend">
-                                                <input id="txtidcli" name="txtidcli" class="form-control" required hidden></input>
+                                                <input id="txtidcli" name="txtidcli" class="form-control" required hidden ></input>
                                                 <input type="text" name="txtidusu" id="txtidusu" class="form-control" value="<?php echo $_SESSION['idusu']; ?>"  hidden >
                                                 <input id="txtRucCli" name="txtRucCli" class="form-control" required readonly></input>
                                                 <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modal-clientes"><i class="fas fa-search"></i></button>
+                                                <button type="button" onclick="listClientes()" class="btn btn-outline-info" data-toggle="modal" data-target="#modal-clientes"><i class="fas fa-search"></i></button>
                                             </div>
                                         </div>
 
@@ -45,10 +45,10 @@
                                                     <div class="row">
                                                         <input type="text" name="txtOPE" id="txtOPE" class="form-control" placeholder="OPE" value="GUA" hidden>
 
-                                                        <div class="col-lg-2">
+                                                        <div class="col-lg-2" hidden>
                                                             <label class="col-form-label"></i>Monto del Crédito: </label>
                                                             <div class="input-group-prepend">
-                                                                <input type="number" id="txtmoncre" name="txtmoncre" min="100000" class="form-control" required></input>
+                                                                <input type="number" id="txtmoncre" name="txtmoncre" min="100000" value="0" class="form-control" required></input>
                                                             </div>
                                                         </div>
 
@@ -61,7 +61,7 @@
                                                         </div>
 
                                                         <div class="col-lg-2">
-                                                            <label class="col-form-label"></i>Fecha Crédito: </label>
+                                                            <label class="col-form-label"></i>Fecha Cuota 1: </label>
                                                             <div class="input-group-prepend">
                                                                 <input type="date" id="txtfeccuo" name="txtfeccuo" value="<?php echo date('Y-m-d'); ?>" class="form-control" required></input>
                                                             </div>
@@ -180,12 +180,10 @@
                                     <div class="table-responsive">
                                         <table id="tabClientes" name="tabClientes" class="table table-bordered table-striped">
                                             <thead>
-                                                <th>Id</th>
-                                                <th>Ruc</th>
-                                                <th>Nombre</th>
-                                                <th>Apellido</th>
-                                                <th>Cel / Telef</th>
                                                 <th></th>
+                                                <th>Nº Documento</th>
+                                                <th>Razón Social</th>
+                                                <th>Id</th>
                                             </thead>
                                             <tbody>
                                             </tbody>
@@ -213,7 +211,24 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/datatables/datatables.min.js"></script>
     <script>
+  
+</script>
+    <script>
         $(function() {
+
+    //         $("#tabClientes").DataTable({
+    //   "responsive": true, "lengthChange": false, "autoWidth": false,
+    //   "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    // }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    // $('#example2').DataTable({
+    //   "paging": true,
+    //   "lengthChange": false,
+    //   "searching": false,
+    //   "ordering": true,
+    //   "info": true,
+    //   "autoWidth": false,
+    //   "responsive": true,
+    // });
 
             $('.select2').select2();
             $('.select2bs4').select2({
