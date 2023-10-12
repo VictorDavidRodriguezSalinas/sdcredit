@@ -41,7 +41,7 @@ function agregarDetalle() {
     const numpgr = document.getElementById("txtnumpgr").value;
     const tipven = document.getElementById("txttipven").value;
     const tipint = document.getElementById("txttipint").value;
-    const fecha = new Date(document.getElementById("txtfeccuo").value);
+    var fecha = new Date(document.getElementById("txtfeccuo").value);
     const moncuo = document.getElementById("txtmoncuo").value;
     const cancuo = document.getElementById("txtcancuo").value;
     const feccuo =formatearFecha(fecha);
@@ -50,36 +50,36 @@ function agregarDetalle() {
     const idcli = document.getElementById("txtidcli").value;
     const idusu = document.getElementById("txtidusu").value;
 
-    if (tipven == 'DIA') {
-
-        fecha.setDate(fecha.getDate() + 1);
-    }
-    else if (tipven == 'SEM') {
-        fecha.setDate(fecha.getDate() + 7);
-    }
-    else if (tipven == 'MES') {
-        fecha.setDate(fecha.getMonth() + 1);
-
-    }
+  
     
-    const fechaFormateada = formatearFecha(fecha);
+    //var fechaFormateada = formatearFecha(fecha);
 
 
     var i = 0;
     let tot = 0;
     while (i < cancuo) {
-
-        arrCuotas.push([i + 1, fechaFormateada, moncuo]);
+        
+        if (tipven == 'DIA') {
+         fecha.setDate(fecha.getDate() + 1);
+        
+        }
+        else if (tipven == 'SEM') {
+            fecha.setDate(fecha.getDate() + 7);
+        }
+        else if (tipven == 'MES') {
+           fecha.setDate(fecha.getMonth() + 1);
+    
+        }
+        
+        arrCuotas.push([i + 1, formatearFecha(fecha), moncuo]);
         tot += parseFloat(moncuo);
         //table.row.add([i + 1, fechaFormateada, moncuo]).draw();
         i++;
     }
     // Convertir el array a un formato JSON
 
-
-
-
     for (var i = 0; i < arrCuotas.length; i++) {
+       
         var fila = {};
         fila.numpgr=numpgr;
         fila.numcuo = arrCuotas[i][0];
@@ -94,14 +94,6 @@ function agregarDetalle() {
         fila.estpgr = 'PEN';
         fila.idcli = idcli;
         fila.idusu = idusu;
-
-
-
-
-
-
-
-        
         fila.totpgr=tot;
         datosJSON.push(fila);
     }
