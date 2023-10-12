@@ -38,6 +38,18 @@ $('#cmdGuardar').click(function (e) {
     .then(response => response.text())
     .then(data => {
         console.log(data); // Imprime la respuesta del servidor
+      
+
+        $("#frmAddCuotas").trigger("reset");
+
+
+        if (ope === 'GUA') {
+            swal({ title: "Registrado", text: "exitosamente!!!", icon: "success", timer: "1250", });
+        }
+       
+        Enumerar();
+        tabCuotas.ajax.reload(null, false);
+
     })
     .catch(error => {
         console.error('Error:', error);
@@ -122,7 +134,7 @@ function agregarDetalle() {
     document.getElementById("txttotpgr").value = numeroFormateado + ' GS.'; //total
     //agregar datos a DataTable
 
-    var table = $('#tabCuotas').DataTable({
+    var tabCuotas = $('#tabCuotas').DataTable({
         data: datosJSON,
         columns: [
             { data: 'numcuo' },

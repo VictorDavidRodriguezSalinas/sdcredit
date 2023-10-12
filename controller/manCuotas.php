@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $estpgr = $dato['estpgr'];
       $feccuo = $dato['feccuo'];
       $fecven = $dato['fecvenymd'];
-      $idcli = 0; //$dato['idcli'];
+      $idcli = $dato['idcli'];
       $idusu = $dato['idusu'];
       $moncuo = $dato['moncuo'];
       $monint = $dato['monint'];
