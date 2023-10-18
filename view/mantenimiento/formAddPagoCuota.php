@@ -46,7 +46,7 @@
 
                                                         <div class="col-lg-2">
                                                             <label class="col-form-label"></i> Cuota (*): </label>
-                                                            <select id="dtcCuota" name="dtcCuota" class="form-control " style="width: 100%;">
+                                                            <select id="dtcCUO" name="dtcCUO" class="form-control " style="width: 100%;">
                                                                 
                                                             </select>
                                                         </div>

@@ -236,5 +236,5 @@
 
         });
     </script>
-    <script type="text/javascript" src="view/mantenimiento/formAddCuotas.js"></script>
+    <script type="text/javascript" src="view/mantenimiento/formAddCuotas.js?"<?php echo date('Y-m-d h:m:s') ?>></script>
 </body>

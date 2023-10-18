@@ -4,7 +4,7 @@ $(function () {
  });
 
  function cargarCuotas(id) {
-    console.log(id);
+    
     $.ajax({
         url: 'controller/listarTablaId.php',
         type: 'POST',
