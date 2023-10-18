@@ -44,7 +44,7 @@
                   </div>
                   <div class="card-footer">
                     <button type="submit" id="btnGuardar" class="btn btn-outline-success"><i class="fas fa-save"></i> Guardar</button>
-                    <button onclick='location.href="/sdcredit/dashboard"' class="btn btn-outline-danger"><i class="fas fa-times-circle"></i> Cerrar</button>
+                    <button onclick='Cerrar()' class="btn btn-outline-danger"><i class="fas fa-times-circle"></i> Cerrar</button>
                   </div>
                 </form>
               </div>
@@ -59,13 +59,16 @@
                     <table id="tabCliente" name="tabCliente" class="table table-bordered table-striped">
                       <thead>
                         <th>Id</th>
+                        <th>Opciones</th>
                         <th>Ruc</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Telefono</th>
-                        <th>Opciones</th>
+                        
+                      
                       </thead>
                       <tbody>
+                       
                       </tbody>
                     </table>
                   </div>
@@ -83,7 +86,7 @@
     <script src="assets/popper/popper.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/datatables/datatables.min.js"></script>
-    <script type="text/javascript" src="view/mantenimiento/formAddCliente.js"></script>
+    <script type="text/javascript" src="view/mantenimiento/formAddCliente.js?<?php echo  date('Y-m-d H:i:s'); ?>"></script>
 
   </body>
 

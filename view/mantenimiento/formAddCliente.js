@@ -19,12 +19,17 @@ function listCliente() {
 			"dataSrc": ""
 		},
 		"columns": [
+			
 			{ "data": "idcli" },
+		
+			{"defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-warning btn-sm btnEditar'><i class='fas fa-user-edit'></i>Editar</button></div></div>"},
+       
 			{ "data": "ruccli" },
 			{ "data": "nomcli" },
 			{ "data": "apecli" },
-			{ "data": "telcli" },
-			{ "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-warning btn-xs btnEditar'><i class='fa fa-user-edit'>Editar</i></button></button><button class='btn btn-danger btn-xs btnBorrar'><i class='fa fa-user-minus'>Eliminar</i></button></div></div></div></div>" }
+			{ "data": "telcli" }	
+
+			
 		],
 		language: {
 			"lengthMenu": "Mostrar _MENU_ registros",
@@ -131,6 +136,8 @@ $(document).on("click", ".btnEditar", function (e) {
 				$("#txtApeCli").val(js[i].apecli);
 				$("#txtTelCli").val(js[i].telcli);
 				$("#dtcUSU").val(js[i].idusu);
+				$("#txtRucCli").focus();
+				window.scrollTo({ top: 0, behavior: 'smooth' });
 				
 			}
 		}
@@ -203,4 +210,10 @@ function cargarUsuarios() {
           
         }
       });   
+}
+
+function Cerrar(){
+	
+	$("#txtOPE").val("");
+	window.location.assign("/sdcredit/dashboard");
 }
