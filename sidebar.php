@@ -127,6 +127,13 @@
             </li>
 
             <li class="nav-item">
+              <a href="Cobrar" class="nav-link">
+                <i class="fas fa-sort-amount-down nav-icon"></i>
+                <p>Cobrar Cuota </p>
+              </a>
+            </li>
+
+            <li class="nav-item">
               <a href="Retiro" class="nav-link">
                 <i class="fas fa-sort-amount-down nav-icon"></i>
                 <p>Retiro de dinero </p>

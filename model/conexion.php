@@ -11,7 +11,7 @@ try {
 
 			//declaramos las variables para la conexion
 
-			parent::__construct('localhost','sdinfco_admin','brickman2017','sdinfco_sdcredit');
+			parent::__construct('sdinformaticapy.com','sdinfco_admin','brickman2017','sdinfco_sdcredit');
 
 			//188.6parent::__construct('127.0.0.1','admin','brickman','procoindi');8.47.164 seleccionamos el tipo de caracteres a utilizar (utf-8 que acepte tildes)
 

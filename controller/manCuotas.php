@@ -4,6 +4,7 @@ require_once('../model/metodos.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $json = file_get_contents('php://input');
   $datos = json_decode($json, true);
+  
   if (!empty($datos)) {
     foreach ($datos as $dato) {
       $fecven=new DateTime();

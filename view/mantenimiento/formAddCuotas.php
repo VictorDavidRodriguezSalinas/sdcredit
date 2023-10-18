@@ -40,7 +40,6 @@
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="card card-info card-outline">
-
                                                 <div class="card-body">
                                                     <div class="row">
                                                         <input type="text" name="txtOPE" id="txtOPE" class="form-control" placeholder="OPE" value="GUA" hidden>

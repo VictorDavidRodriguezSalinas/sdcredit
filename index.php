@@ -144,6 +144,10 @@ $fechaActual= date("d-m-Y");
                   case 'Apertura':
                     require "view/mantenimiento/formAddApertura.php";
                     break;
+                    case 'Cobrar':
+                      require "view/mantenimiento/formAddPagoCuota.php";
+                      break;
+
                   case 'Retiro':
                     require "view/mantenimiento/formAddRetiroCaja.php";
                     break;
