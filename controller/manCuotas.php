@@ -23,7 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $tipint = $dato['tipint'];
       $tipven = $dato['tipven'];
       $totpgr = $dato['totpgr'];
-      $param = "'0'," . "'$numpgr'," . "'$numcuo'," . "'$feccuo'," . "'$fecven'," . "'$tipven'," . "'$moncuo'," . "'$tipint'," . "'$monint'," . "'$porint'," . "'$estcuo'," . "'$estpgr'," . "'$idcli'," . "'$idusu'," . "'$ope'";
+      $moncre = $dato['moncre'];
+      $cancuo = $dato['cancuo'];
+      $param = "'0'," . "'$numpgr'," . "'$numcuo'," . "'$feccuo'," . "'$fecven'," . "'$tipven'," . "'$moncuo'," . "'$tipint'," . "'$monint'," . "'$porint'," . "'$estcuo'," . "'$estpgr'," . "'$idcli'," . "'$idusu'," . "'$moncre'," . "'$cancuo'," . "'$ope'";
       $cli = new Metodo();
       $reg = $cli->Insertar($param, 'man_cuotas');
 

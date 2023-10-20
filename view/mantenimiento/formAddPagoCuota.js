@@ -1,24 +1,92 @@
+var arrCuotas=[];
+var arrCuota=[];
+// Obtén una referencia al elemento select
+var select = document.getElementById('dtcCUO');
+
 $(function () {
 
  
  });
 
  function cargarCuotas(id) {
-    
+    var inputDate = document.getElementById("txtfecpag");
+    var valorDate = inputDate.value;
+
+  var parametros="'"+id+"',"+"'"+valorDate+"'";
+  console.log(parametros);
+  
     $.ajax({
-        url: 'controller/listarTablaId.php',
+        url: 'controller/listarProcedure.php',
         type: 'POST',
-        data: {nomtab:'cuotas',nomid:'idcli',id:id},
+        data: {param:parametros+'',procedure:'lis_cuotaspen'},
         success: function(res){
           var js= JSON.parse(res);
+          arrCuotas=[];
+          arrCuotas=js;
+          document.getElementById("dtcCUO").innerHTML=''; //resetea el combo
             for (var i = 0; i < js.length; i++) {
-              $("#dtcCUO").append('<option value="'+js[i].idcuo+'">'+js[i].numcuo+'</option>');
+              $("#dtcCUO").append('<option value="'+js[i].idcuo+'">'+js[i].numcuo+ " - Vence: "+js[i].fecven+'</option>');
             }
           
         }
       });
     
 }
+
+
+
+// Agrega un oyente de eventos al elemento select
+select.addEventListener('change', function() {
+    // Obtiene el valor seleccionado
+    seleccionarCuota();
+    
+    
+});
+
+function seleccionarCuota(){
+    var idcuo = select.value;
+    var tipven='';
+    
+    obtenerDatosCuota(idcuo);
+   
+    if (arrCuota[0].tipven=='DIA'){
+     tipven=" Dias";
+     $("#txtatraso").val(arrCuota[0].dias_atraso+" "+tipven);
+    }
+    else if (arrCuota[0].tipven=='SEM'){
+        tipven=" Semanas";
+        $("#txtatraso").val(arrCuota[0].sem_atraso+" "+tipven);
+    }
+    else if (arrCuota[0].tipven=='MES'){
+        tipven=" Mes/es";
+        $("#txtatraso").val(arrCuota[0].dias_atraso/30+" "+tipven);
+    }
+    $("#txtmoncuo").val(formaterNumero(parseFloat(arrCuota[0].moncuo)));
+   
+
+    $("#txtintacu").val(formaterNumero(parseFloat(arrCuota[0].intacu)));
+    
+   
+
+    $("#txtmonpag").val(formaterNumero(parseFloat(arrCuota[0].monpag)));
+
+   
+   
+
+}
+
+function obtenerDatosCuota(idcuo) {
+
+    arrCuota=[];
+
+    for (var i = 0; i < arrCuotas.length; i++) {
+        if (arrCuotas[i].idcuo === idcuo) {
+            arrCuota.push(arrCuotas[i]);
+        }
+    }
+    
+}
+
 
  function listClientes() {
 	opcion = "clientes";
@@ -72,8 +140,13 @@ $(document).on("click", ".btnSeleccionar", function (e) {
 	$("#txtRucCli").val(ruccli);
 	$("#txtRazCli").val(razcli);
     cargarCuotas(id);
-
-	//document.getElementById(txtPesActv).focus();
 });
 
 
+function formaterNumero(numero){
+    var numeroFormateado = numero.toLocaleString('es-ES', {
+        style: 'decimal', // Puede ser 'decimal', 'percent', 'currency', etc.
+        minimumFractionDigits: 0, // Número mínimo de decimales
+    });
+    return numeroFormateado;
+}

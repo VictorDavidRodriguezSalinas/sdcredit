@@ -44,10 +44,10 @@
                                                     <div class="row">
                                                         <input type="text" name="txtOPE" id="txtOPE" class="form-control" placeholder="OPE" value="GUA" hidden>
 
-                                                        <div class="col-lg-2" hidden>
+                                                        <div class="col-lg-2" >
                                                             <label class="col-form-label"></i>Monto del Crédito: </label>
                                                             <div class="input-group-prepend">
-                                                                <input type="number" id="txtmoncre" name="txtmoncre" min="100000" value="0" class="form-control" required></input>
+                                                                <input type="number" id="txtmoncre" name="txtmoncre" min="0" value="0" class="form-control" required></input>
                                                             </div>
                                                         </div>
 

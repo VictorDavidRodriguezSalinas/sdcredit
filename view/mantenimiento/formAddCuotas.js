@@ -5,6 +5,31 @@ $(function () {
     // listClientes();
     Enumerar();
 
+
+
+});
+
+
+
+
+var inputs = document.querySelectorAll(".form-control");
+
+// Agrega un controlador de eventos a cada input
+inputs.forEach(function(input) {
+    // input.addEventListener("input", function() {
+    //     // Elimina cualquier carácter no numérico
+    //     //this.value = this.value.replace(/\D/g, '');
+    // });
+    input.addEventListener("keydown", function (e) {
+        // Obtén el valor de la tecla presionada
+        var tecla = e.key;
+    
+        // Verifica si la tecla presionada es un número o teclas especiales como Backspace, Flechas, etc.
+        if (!/^[0-9]$/.test(tecla) && !["Backspace", "ArrowLeft", "ArrowRight", "Delete", "Tab", "End", "Home"].includes(tecla)) {
+            // Si no es un número o una tecla especial, previene la entrada
+            e.preventDefault();
+        }
+    });
 });
 
 //GUARDAR DATOS
@@ -53,6 +78,8 @@ $('#cmdGuardar').click(function (e) {
             Enumerar();
             // Limpia todas las filas de la tabla
             tabCuotas.clear().draw();
+            arrCuotas = [];
+            datosJSON = [];
 
         })
         .catch(error => {
@@ -64,6 +91,7 @@ $('#cmdGuardar').click(function (e) {
 
 function agregarDetalle() {
 
+   
     const numpgr = document.getElementById("txtnumpgr").value;
     const tipven = document.getElementById("txttipven").value;
     const tipint = document.getElementById("txttipint").value;
@@ -76,9 +104,9 @@ function agregarDetalle() {
     const idcli = document.getElementById("txtidcli").value;
     const idusu = document.getElementById("txtidusu").value;
     const moncre = document.getElementById("txtmoncre").value;
+    if (moncre == 0) { swal({ title: "Ingrese monto del crédito !!!", text: "", icon: "warning", timer: "1200", }); document.getElementById("txtmoncre").focus(); throw ''; }
     if (idcli == '') { swal({ title: "Seleccione el Cliente !!!", text: "", icon: "warning", timer: "1200", }); document.getElementById("txtidcli").focus(); throw ''; }
     if (numpgr == '') { swal({ title: "Ingrese número de pagaré !!!", text: "", icon: "warning", timer: "1200", }); document.getElementById("txtnumpgr").focus(); throw ''; }
-    if (moncre == '') { swal({ title: "Ingrese monto del crédito !!!", text: "", icon: "warning", timer: "1200", }); document.getElementById("txtmoncre").focus(); throw ''; }
     if (fecha == '') { swal({ title: "Ingrese fecha !!!", text: "", icon: "warning", timer: "1200", }); document.getElementById("txtfeccuo").focus(); throw ''; }
     if (moncuo == '') { swal({ title: "Ingrese monto de cuota !!!", text: "", icon: "warning", timer: "1200", }); document.getElementById("txtmoncuo").focus(); throw ''; }
     if (moncuo == '') { swal({ title: "Ingrese monto de cuota !!!", text: "", icon: "warning", timer: "1200", }); document.getElementById("txtmoncuo").focus(); throw ''; }
@@ -127,6 +155,8 @@ function agregarDetalle() {
         fila.idusu = idusu;
         fila.totpgr = tot;
         fila.fecvenymd = arrCuotas[i][3];
+        fila.moncre = moncre;
+        fila.cancuo=cancuo;
         datosJSON.push(fila);
     }
 
@@ -172,6 +202,8 @@ function agregarDetalle() {
         "autoWidth": false,
     });
 
+   
+  
 
 }
 function formatearFecha(fecha) {
@@ -218,8 +250,7 @@ $(document).on("click", ".btnSeleccionar", function (e) {
     $("#txtidcli").val(id);
     $("#txtRucCli").val(ruccli);
     $("#txtRazCli").val(razcli);
-
-    //document.getElementById(txtPesActv).focus();
+    document.getElementById("txtmoncre").focus();
 });
 
 
