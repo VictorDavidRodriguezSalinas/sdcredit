@@ -46,3 +46,5 @@ else
   );
   echo json_encode($res, JSON_FORCE_OBJECT);
 }
+
+?>

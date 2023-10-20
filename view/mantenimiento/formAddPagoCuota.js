@@ -1,102 +1,140 @@
-var arrCuotas=[];
-var arrCuota=[];
+var arrCuotas = [];
+var arrCuota = [];
 // Obtén una referencia al elemento select
 var select = document.getElementById('dtcCUO');
 
 $(function () {
 
- 
- });
 
- function cargarCuotas(id) {
-    var inputDate = document.getElementById("txtfecpag");
-    var valorDate = inputDate.value;
+});
 
-  var parametros="'"+id+"',"+"'"+valorDate+"'";
-  console.log(parametros);
-  
-    $.ajax({
-        url: 'controller/listarProcedure.php',
-        type: 'POST',
-        data: {param:parametros+'',procedure:'lis_cuotaspen'},
-        success: function(res){
-          var js= JSON.parse(res);
-          arrCuotas=[];
-          arrCuotas=js;
-          document.getElementById("dtcCUO").innerHTML=''; //resetea el combo
-            for (var i = 0; i < js.length; i++) {
-              $("#dtcCUO").append('<option value="'+js[i].idcuo+'">'+js[i].numcuo+ " - Vence: "+js[i].fecven+'</option>');
-            }
-          
-        }
-      });
-    
+//GUARDAR DATOS
+$('#cmdGuardar').click(function (e) {
+
+	ope = document.getElementById("txtOPEPAG").value;
+	e.preventDefault();
+	$.ajax({
+		url: 'controller/manPago.php',
+		type: 'POST',
+		data: $('#frmAddPagoCuota').serialize(),
+		success: function (res) {
+			console.log(res);
+			var js = JSON.parse(res);
+			if (js.estado == 'err') {
+
+				swal({ title: "No se pudo registrar el pago", text: "", icon: "warning", timer: "1250", });
+				return;
+			}
+			else if (js.estado == 'ok') {
+
+				if (ope === 'GUA') {
+					swal({ title: "Registrado", text: "exitosamente!!!", icon: "success", timer: "1250", });
+					$("#frmAddPagoCuota").trigger("reset");
+			
+				}
+				else {
+					swal({ title: "Actualizado", text: "exitosamente!!!", icon: "success", timer: "1250", });
+				}
+			}
+		}
+	});
+});
+
+function cargarCuotas(id) {
+	var inputDate = document.getElementById("txtfecpag");
+	var valorDate = inputDate.value;
+
+	var parametros = "'" + id + "'," + "'" + valorDate + "'";
+
+
+	$.ajax({
+		url: 'controller/listarProcedure.php',
+		type: 'POST',
+		data: { param: parametros + '', procedure: 'lis_cuotaspen' },
+		success: function (res) {
+			console.log(res);
+			// var js = JSON.parse(res);
+			// arrCuotas = [];
+			// arrCuotas = js;
+			// document.getElementById("dtcCUO").innerHTML = ''; //resetea el combo
+			// for (var i = 0; i < js.length; i++) {
+			// 	$("#dtcCUO").append('<option value="' + js[i].idcuo + '">' + js[i].numcuo + "/" + js[i].cancuo + " - Vence: " + js[i].fecven + '</option>');
+			// }
+
+			// seleccionarCuota();
+
+
+		}
+	});
+
+
+
 }
 
 
 
 // Agrega un oyente de eventos al elemento select
-select.addEventListener('change', function() {
-    // Obtiene el valor seleccionado
-    seleccionarCuota();
-    
-    
+select.addEventListener('change', function () {
+	// Obtiene el valor seleccionado
+	seleccionarCuota();
+
+
 });
 
-function seleccionarCuota(){
-    var idcuo = select.value;
-    var tipven='';
-    
-    obtenerDatosCuota(idcuo);
-   
-    if (arrCuota[0].tipven=='DIA'){
-     tipven=" Dias";
-     $("#txtatraso").val(arrCuota[0].dias_atraso+" "+tipven);
-    }
-    else if (arrCuota[0].tipven=='SEM'){
-        tipven=" Semanas";
-        $("#txtatraso").val(arrCuota[0].sem_atraso+" "+tipven);
-    }
-    else if (arrCuota[0].tipven=='MES'){
-        tipven=" Mes/es";
-        $("#txtatraso").val(arrCuota[0].dias_atraso/30+" "+tipven);
-    }
-    $("#txtmoncuo").val(formaterNumero(parseFloat(arrCuota[0].moncuo)));
-   
+function seleccionarCuota() {
+	var idcuo = select.value;
+	var tipven = '';
 
-    $("#txtintacu").val(formaterNumero(parseFloat(arrCuota[0].intacu)));
-    
-   
+	obtenerDatosCuota(idcuo);
 
-    $("#txtmonpag").val(formaterNumero(parseFloat(arrCuota[0].monpag)));
+	if (arrCuota[0].tipven == 'DIA') {
+		tipven = " Dias";
+		$("#txtatraso").val(arrCuota[0].dias_atraso + " " + tipven);
+	}
+	else if (arrCuota[0].tipven == 'SEM') {
+		tipven = " Semanas";
+		$("#txtatraso").val(arrCuota[0].sem_atraso + " " + tipven);
+	}
+	else if (arrCuota[0].tipven == 'MES') {
+		tipven = " Mes/es";
+		$("#txtatraso").val(arrCuota[0].dias_atraso / 30 + " " + tipven);
+	}
+	$("#txtmoncuo").val(formaterNumero(parseFloat(arrCuota[0].moncuo)));
 
-   
-   
+
+	$("#txtintacu").val(formaterNumero(parseFloat(arrCuota[0].intacu)));
+
+
+
+	$("#txtmonpag").val(formaterNumero(parseFloat(arrCuota[0].monpag)));
+
+
+
 
 }
 
 function obtenerDatosCuota(idcuo) {
 
-    arrCuota=[];
+	arrCuota = [];
 
-    for (var i = 0; i < arrCuotas.length; i++) {
-        if (arrCuotas[i].idcuo === idcuo) {
-            arrCuota.push(arrCuotas[i]);
-        }
-    }
-    
+	for (var i = 0; i < arrCuotas.length; i++) {
+		if (arrCuotas[i].idcuo === idcuo) {
+			arrCuota.push(arrCuotas[i]);
+		}
+	}
+
 }
 
 
- function listClientes() {
+function listClientes() {
 	opcion = "clientes";
 	tablaAnimales = $('#tabClientes').DataTable({
-        "destroy": true,
+		"destroy": true,
 		"paging": true,
 		"ordering": true,
 		"info": false,
 		"bFilter": true,
-        "bJQueryUI": false,
+		"bJQueryUI": false,
 		"ajax": {
 			"url": "controller/listarCamposTabla.php",
 			"method": 'POST', //usamos el metodo POST
@@ -104,11 +142,11 @@ function obtenerDatosCuota(idcuo) {
 			"dataSrc": ""
 		},
 		"columns": [
-            { "defaultContent": "<div class='text-center'><div class='btn-group'><button data-dismiss='modal' class='btn btn-success btn-sm btnSeleccionar'><i class='fas fa-check'></i>Seleccionar</button></div></div>" },
+			{ "defaultContent": "<div class='text-center'><div class='btn-group'><button data-dismiss='modal' class='btn btn-success btn-sm btnSeleccionar'><i class='fas fa-check'></i>Seleccionar</button></div></div>" },
 			{ "data": "ruccli" },
-            { "data": "razcli" },
-            { "data": "idcli" }
-			
+			{ "data": "razcli" },
+			{ "data": "idcli" }
+
 		],
 		language: {
 			"lengthMenu": "Mostrar _MENU_ registros",
@@ -139,14 +177,15 @@ $(document).on("click", ".btnSeleccionar", function (e) {
 	$("#txtidcli").val(id);
 	$("#txtRucCli").val(ruccli);
 	$("#txtRazCli").val(razcli);
-    cargarCuotas(id);
+	cargarCuotas(id);
 });
 
 
-function formaterNumero(numero){
-    var numeroFormateado = numero.toLocaleString('es-ES', {
-        style: 'decimal', // Puede ser 'decimal', 'percent', 'currency', etc.
-        minimumFractionDigits: 0, // Número mínimo de decimales
-    });
-    return numeroFormateado;
+function formaterNumero(numero) {
+	var numeroFormateado = numero.toLocaleString('es-ES', {
+		style: 'decimal', // Puede ser 'decimal', 'percent', 'currency', etc.
+		minimumFractionDigits: 0, // Número mínimo de decimales
+	});
+	return numeroFormateado;
 }
+

@@ -1,15 +1,15 @@
-<body class="">
+<body  onload="enviarPost();">
     <div class="align-content-center">
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-9" id="formularioregistros">
+                    <div class="col-md-9">
                         <div class="card card-success">
                             <div class="card-header">
                                 <h3 class="card-title">Registro de Pago de Cuota</h3>
                             </div>
                             <div class="card-body">
-                                <form id="frmAddPagoCuotas" method="POST">
+                                <form id="frmAddPagoCuota" method="POST">
                                     <div class="row">
                                         <div class="col-lg-2">
                                             <label class="col-form-label"></i>Fecha Pago: </label>
@@ -17,11 +17,7 @@
                                                 <input type="date" id="txtfecpag" name="txtfecpag" value="<?php echo date('Y-m-d'); ?>" class="form-control" required></input>
                                             </div>
                                         </div>
-                                        <div class="col-lg-2">
-                                            <label class="col-form-label"></i> Nº Recibo (*): </label>
-                                            <input type="number" id="txtnumpgr" name="txtnumpgr" min="1" class="form-control" required></input>
-                                        </div>
-
+                                        
                                         <div class="col-lg-3">
                                             <label class="col-form-label"></i>Ruc (*): </label>
                                             <div class="input-group-prepend">
@@ -48,7 +44,7 @@
                                             <div class="card card-info card-outline">
                                                 <div class="card-body">
                                                     <div class="row">
-                                                        <input type="text" name="txtOPE" id="txtOPE" class="form-control" placeholder="OPE" value="GUA" hidden>
+                                                        <input type="text" name="txtOPEPAG" id="txtOPEPAG" class="form-control" placeholder="OPE" value="GUA" hidden>
 
                                                         <div class="col-lg-3">
                                                             <div class="input-group mb-3">
@@ -116,7 +112,7 @@
                                 </form>
                                 <div class="col-lg-6">
                                     <div class="card-body">
-                                        <button id="cmdGuardar" class="btn btn-outline-success"><i class="fas fa-save"></i> Cobrar</button>
+                                    <button id="cmdGuardar" class="btn btn-outline-success"><i class="fas fa-save"></i> Guardar</button>
                                         <button type="button" onclick='location.href="/sdcredit/dashboard"' class="btn btn-outline-danger"><i class="fas fa-times-circle"></i> Cerrar</button>
                                     </div>
                                 </div>
@@ -195,5 +191,5 @@
 
         });
     </script>
-    <script type="text/javascript" src="view/mantenimiento/formAddPagoCuota.js"></script>
+    <script type="text/javascript" src="view/mantenimiento/formAddPagoCuota.js?v<?php echo date("Y-m-d H:i:s") ?>"></script>
 </body>
