@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$fechaActual= date("d-m-Y");
+$fechaActual = date("d-m-Y");
 
 ?>
 <!DOCTYPE html>
@@ -133,20 +133,29 @@ $fechaActual= date("d-m-Y");
                     require "dashboard.php";
                     break;
                   case 'adduser':
+                    if ($_SESSION['nivusu'] == 2) {
+                      break;
+                    };
                     require "view/mantenimiento/formAddUser.php";
                     break;
-                    case 'credito':
+                  case 'credito':
+                    if ($_SESSION['nivusu'] == 2) {
+                      break;
+                    };
                     require "view/mantenimiento/formAddCuotas.php";
                     break;
                   case 'Auditoria':
+                    if ($_SESSION['nivusu'] == 2) {
+                      break;
+                    };
                     require "view/mantenimiento/formAuditoria.php";
                     break;
                   case 'Apertura':
                     require "view/mantenimiento/formAddApertura.php";
                     break;
-                    case 'Cobrar':
-                      require "view/mantenimiento/formAddPagoCuota.php";
-                      break;
+                  case 'Cobrar':
+                    require "view/mantenimiento/formAddPagoCuota.php";
+                    break;
 
                   case 'Retiro':
                     require "view/mantenimiento/formAddRetiroCaja.php";
@@ -159,17 +168,26 @@ $fechaActual= date("d-m-Y");
                     break;
 
                   case 'Cliente':
+                    if ($_SESSION['nivusu'] == 2) {
+                      break;
+                    };
                     require "view/mantenimiento/formAddCliente.php";
                     break;
                   case 'Clientes':
                     require "view/mantenimiento/formLisClientes.php";
                     break;
                   case 'Buckup':
+                    if ($_SESSION['nivusu'] == 2) {
+                      break;
+                    };
                     require "view/mantenimiento/formBuckup.php";
                     break;
 
                   case 'Retiro':
                     require "view/mantenimiento/formAddRetiroCaja.php";
+                    break;
+                  case 'Creditos':
+                    require "view/mantenimiento/formEstadoCuenta.php";
                     break;
                 }
               } else {

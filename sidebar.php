@@ -47,7 +47,7 @@
             </p>
           </a>
 
-          <ul class="nav nav-treeview">
+          <ul class="nav nav-treeview" <?php if ($_SESSION['nivusu']==2) { echo("hidden");}; ?>>
             <li class="nav-item">
               <a href="Cliente" class="nav-link">
                 <i class="fas fa-check-double nav-icon"></i>
@@ -82,7 +82,7 @@
           </a>
 
           <ul class="nav nav-treeview">
-            <li class="nav-item">
+            <li class="nav-item" <?php if ($_SESSION['nivusu']==2) { echo("hidden");}; ?>>
               <a href="credito" class="nav-link">
                 <i class="fas fa-check-double nav-icon"></i>
                 <p>Registrar crédito </p>
@@ -90,17 +90,12 @@
             </li>
 
             <li class="nav-item">
-              <a href="Ventas" class="nav-link">
+              <a href="Creditos" class="nav-link">
                 <i class="far fa-file-alt nav-icon"></i>
                 <p>Estado de cuenta de clientes </p>
               </a>
             </li>
-            <li class="nav-item">
-              <a href="VentasGanado" class="nav-link">
-                <i class="far fa-file-alt nav-icon"></i>
-                <p>Listado de créditos </p>
-              </a>
-            </li>
+            
           </ul>
 
 
@@ -161,7 +156,7 @@
 
 
         <!-- USUARIOS -->
-        <li class="nav-item has-treeview">
+        <li class="nav-item has-treeview" <?php if ($_SESSION['nivusu']==2) { echo("hidden");}; ?>>
           <a href="#" class="nav-link">
             <i class="nav-icon fa fa-tools"></i>
             <p>
@@ -210,7 +205,7 @@
         
         <!-- BUCKUP -->
 
-        <li class="nav-item">
+        <li class="nav-item" <?php if ($_SESSION['nivusu']==2) { echo("hidden");}; ?>>
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-database "></i>
             <p>

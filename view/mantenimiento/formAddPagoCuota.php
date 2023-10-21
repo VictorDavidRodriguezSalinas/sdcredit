@@ -37,6 +37,7 @@
                                                             <div class="input-group-prepend">
                                                                 <input id="txtidcli" name="txtidcli" class="form-control" required hidden></input>
                                                                 <input type="text" name="txtidusu" id="txtidusu" class="form-control" value="<?php echo $_SESSION['idusu']; ?>" hidden>
+                                                                <input type="text" name="txtnivusu" id="txtnivusu" class="form-control" value="<?php echo $_SESSION['nivusu']; ?>" hidden>
                                                                 <input id="txtRucCli" name="txtRucCli" class="form-control" required readonly></input>
                                                                 <!-- Button trigger modal -->
                                                                 <button type="button" onclick="listClientes()" class="btn btn-outline-info" data-toggle="modal" data-target="#modal-clientes"><i class="fas fa-search"></i></button>

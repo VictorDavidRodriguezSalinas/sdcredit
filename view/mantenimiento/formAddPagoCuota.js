@@ -150,6 +150,8 @@ function obtenerDatosCuota(idcuo) {
 
 
 function listClientes() {
+	idusuario= document.getElementById("txtidusu").value;
+	nivusu= document.getElementById("txtnivusu").value;
 	opcion = "clientes";
 	tablaAnimales = $('#tabClientes').DataTable({
 		"destroy": true,
@@ -159,9 +161,9 @@ function listClientes() {
 		"bFilter": true,
 		"bJQueryUI": false,
 		"ajax": {
-			"url": "controller/listarCamposTabla.php",
+			"url": "controller/listarProcedure.php",
 			"method": 'POST', //usamos el metodo POST
-			"data": { tabla: opcion, campos: 'ruccli, CONCAT(nomcli,", ",apecli) as razcli, idcli ' }, //enviamos opcion 4 para que haga un SELECT
+			"data": { param: "'"+idusuario+"',"+"'"+nivusu+"'" , procedure: 'lis_clientexusu' }, //enviamos opcion 4 para que haga un SELECT
 			"dataSrc": ""
 		},
 		"columns": [
