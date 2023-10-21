@@ -1,5 +1,6 @@
 var arrCuotas = [];
 var arrCuota = [];
+var id=0;
 // Obtén una referencia al elemento select
 var select = document.getElementById('dtcCUO');
 
@@ -28,9 +29,19 @@ $('#cmdGuardar').click(function (e) {
 			else if (js.estado == 'ok') {
 
 				if (ope === 'GUA') {
+
+
+					var miSelect = document.getElementById("dtcCUO");
+
+					// Elimina todas las opciones dentro del select
+					while (miSelect.options.length > 0) {
+						miSelect.remove(0);
+					}
 					swal({ title: "Registrado", text: "exitosamente!!!", icon: "success", timer: "1250", });
-					$("#frmAddPagoCuota").trigger("reset");
-			
+					cargarCuotas(id);
+					
+					
+
 				}
 				else {
 					swal({ title: "Actualizado", text: "exitosamente!!!", icon: "success", timer: "1250", });
@@ -53,15 +64,27 @@ function cargarCuotas(id) {
 		data: { param: parametros + '', procedure: 'lis_cuotaspen' },
 		success: function (res) {
 			console.log(res);
-			// var js = JSON.parse(res);
-			// arrCuotas = [];
-			// arrCuotas = js;
-			// document.getElementById("dtcCUO").innerHTML = ''; //resetea el combo
-			// for (var i = 0; i < js.length; i++) {
-			// 	$("#dtcCUO").append('<option value="' + js[i].idcuo + '">' + js[i].numcuo + "/" + js[i].cancuo + " - Vence: " + js[i].fecven + '</option>');
-			// }
 
-			// seleccionarCuota();
+			var js = JSON.parse(res);
+
+			if (js.estado == 'err') {
+
+				swal({ title: "El cliente no posee cuotas pendientes", text: "", icon: "warning", timer: "1250", });
+				var miBoton = document.getElementById("btnClientes");
+				return;
+			}
+
+			arrCuotas = [];
+			arrCuotas = js;
+			document.getElementById("dtcCUO").innerHTML = ''; //resetea el combo
+			for (var i = 0; i < js.length; i++) {
+				$("#dtcCUO").append('<option value="' + js[i].idcuo + '">' + js[i].numcuo + "/" + js[i].cancuo + " - Vence: " + js[i].fecven + '</option>');
+			}
+
+			seleccionarCuota();
+
+
+
 
 
 		}
