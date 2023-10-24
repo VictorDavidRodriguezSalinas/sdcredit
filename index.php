@@ -189,6 +189,9 @@ $fechaActual = date("d-m-Y");
                   case 'Creditos':
                     require "view/mantenimiento/formEstadoCuenta.php";
                     break;
+                    case 'anular':
+                      require "view/mantenimiento/formAnular.php";
+                      break;
                 }
               } else {
                 require "login.php";

@@ -7,16 +7,16 @@
   <div class="sidebar">
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-      <div class="image">
+      <!-- <div class="image">
         <img src="dist/img/users/1.png" class="img-circle elevation-2" alt="User Image">
-      </div>
+      </div> -->
       <div class="info">
         <a href="#" class="d-block"><?php
                                     if (isset($_SESSION['nomusu'])) {
                                       if ($_SESSION['login'] == 'no') {
                                         $_SESSION['nomusu'] = '';
                                       }
-                                      echo ($_SESSION['nomusu']);
+                                      echo ('Usuario: ' . $_SESSION['nomusu']);
                                     }
                                     ?></a>
       </div>
@@ -47,7 +47,9 @@
             </p>
           </a>
 
-          <ul class="nav nav-treeview" <?php if ($_SESSION['nivusu']==2) { echo("hidden");}; ?>>
+          <ul class="nav nav-treeview" <?php if ($_SESSION['nivusu'] == 2) {
+                                          echo ("hidden");
+                                        }; ?>>
             <li class="nav-item">
               <a href="Cliente" class="nav-link">
                 <i class="fas fa-check-double nav-icon"></i>
@@ -82,7 +84,9 @@
           </a>
 
           <ul class="nav nav-treeview">
-            <li class="nav-item" <?php if ($_SESSION['nivusu']==2) { echo("hidden");}; ?>>
+            <li class="nav-item" <?php if ($_SESSION['nivusu'] == 2) {
+                                    echo ("hidden");
+                                  }; ?>>
               <a href="credito" class="nav-link">
                 <i class="fas fa-check-double nav-icon"></i>
                 <p>Registrar crédito </p>
@@ -95,13 +99,22 @@
                 <p>Estado de cuenta de clientes </p>
               </a>
             </li>
-            
+
+            <li class="nav-item" <?php if ($_SESSION['nivusu'] == 2) {
+                                    echo ("hidden");
+                                  }; ?>>
+              <a href="anular" class="nav-link">
+                <i class="far fa-file-alt nav-icon"></i>
+                <p>Anular Pagaré </p>
+              </a>
+            </li>
+
           </ul>
 
 
         </li>
 
-        
+
         <!-- CAJA -->
 
         <li class="nav-item">
@@ -156,7 +169,9 @@
 
 
         <!-- USUARIOS -->
-        <li class="nav-item has-treeview" <?php if ($_SESSION['nivusu']==2) { echo("hidden");}; ?>>
+        <li class="nav-item has-treeview" <?php if ($_SESSION['nivusu'] == 2) {
+                                            echo ("hidden");
+                                          }; ?>>
           <a href="#" class="nav-link">
             <i class="nav-icon fa fa-tools"></i>
             <p>
@@ -202,10 +217,12 @@
           </ul>
         </li>
 
-        
+
         <!-- BUCKUP -->
 
-        <li class="nav-item" <?php if ($_SESSION['nivusu']==2) { echo("hidden");}; ?>>
+        <li class="nav-item" <?php if ($_SESSION['nivusu'] == 2) {
+                                echo ("hidden");
+                              }; ?>>
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-database "></i>
             <p>
