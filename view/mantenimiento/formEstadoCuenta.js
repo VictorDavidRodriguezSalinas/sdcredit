@@ -1,5 +1,6 @@
 $(function () {
     listCuotas();
+    pintar();
 });
 
 
@@ -25,10 +26,10 @@ function listCuotas() {
         },
         "columns": [
             { "data": "numpgr" },
-            { "data": "fecven" },
             { "data": "ruccli" },
             { "data": "razcli" },
             { "data": "numcuo" },
+            { "data": "fecven" },
             { "data": "moncuo", render: $.fn.dataTable.render.number('.', ',', 0) },
             { "data": "dias_atraso"},
             { "data": "intacu", render: $.fn.dataTable.render.number('.', ',', 0) },
@@ -82,4 +83,7 @@ function listCuotas() {
         ]
     });
 
+
 }
+
+
