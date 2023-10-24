@@ -40,7 +40,7 @@
 
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-user "></i>
+            <i class="nav-icon fas fa-user text-success"></i>
             <p>
               Clientes
               <i class="fas fa-angle-left right "></i>
@@ -52,7 +52,7 @@
                                         }; ?>>
             <li class="nav-item">
               <a href="Cliente" class="nav-link">
-                <i class="fas fa-check-double nav-icon"></i>
+                <i class="fas fa-plus nav-icon"></i>
                 <p>Registrar cliente </p>
               </a>
             </li>
@@ -61,7 +61,7 @@
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a href="Cliente" class="nav-link">
-                <i class="fas fa-check-double nav-icon"></i>
+                <i class="fas fa-list nav-icon"></i>
                 <p>Listado de clientes </p>
               </a>
             </li>
@@ -76,10 +76,10 @@
 
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-calculator "></i>
-            <p>
+            <i class="nav-icon fas fa-calculator text-warning"></i>
+            <p >
               Créditos
-              <i class="fas fa-angle-left right "></i>
+              <i class="fas fa-angle-left right text-info"></i>
             </p>
           </a>
 
@@ -88,15 +88,15 @@
                                     echo ("hidden");
                                   }; ?>>
               <a href="credito" class="nav-link">
-                <i class="fas fa-check-double nav-icon"></i>
+                <i class="fas fa-check-double nav-icon text-success"></i>
                 <p>Registrar crédito </p>
               </a>
             </li>
 
             <li class="nav-item">
               <a href="Creditos" class="nav-link">
-                <i class="far fa-file-alt nav-icon"></i>
-                <p>Estado de cuenta de clientes </p>
+                <i class="far fa-circle nav-icon"></i>
+                <p>Estado de cuenta </p>
               </a>
             </li>
 
@@ -104,7 +104,7 @@
                                     echo ("hidden");
                                   }; ?>>
               <a href="anular" class="nav-link">
-                <i class="far fa-file-alt nav-icon"></i>
+              <i class="nav-icon fa fa-ban text-danger"></i>
                 <p>Anular Pagaré </p>
               </a>
             </li>
@@ -119,9 +119,9 @@
 
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-calculator "></i>
+            <i class="nav-icon fas fa-calendar-check "></i>
             <p>
-              Caja
+              Cobranzas
               <i class="fas fa-angle-left right "></i>
             </p>
           </a>

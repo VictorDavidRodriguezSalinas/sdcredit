@@ -44,7 +44,7 @@
                                                     <div class="row">
                                                         <input type="text" name="txtOPE" id="txtOPE" class="form-control" placeholder="OPE" value="GUA" hidden>
 
-                                                        <div class="col-lg-2" >
+                                                        <div class="col-lg-6" >
                                                             <label class="col-form-label"></i>Monto del Crédito: </label>
                                                             <div class="input-group-prepend">
                                                                 <input type="number" id="txtmoncre" name="txtmoncre" min="0" value="0" class="form-control" required></input>
@@ -52,20 +52,20 @@
                                                         </div>
 
 
-                                                        <div class="col-lg-2">
+                                                        <div class="col-lg-6">
                                                             <label class="col-form-label"></i>Cuotas: </label>
                                                             <div class="input-group-prepend">
                                                                 <input type="number" id="txtcancuo" name="txtcancuo" min="1" value="1" class="form-control"></input>
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-lg-2">
+                                                        <div class="col-lg-6">
                                                             <label class="col-form-label"></i>Fecha Cuota 1: </label>
                                                             <div class="input-group-prepend">
                                                                 <input type="date" id="txtfeccuo" name="txtfeccuo" value="<?php echo date('Y-m-d'); ?>" class="form-control" required></input>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-2">
+                                                        <div class="col-lg-6">
                                                             <label class="col-form-label"></i> Tipo Vencimiento (*): </label>
                                                             <select id="txttipven" name="txttipven" class="form-control " style="width: 100%;">
                                                                 <option value="DIA">Diario</option>
@@ -74,7 +74,7 @@
                                                             </select>
                                                         </div>
 
-                                                        <div class="col-lg-2">
+                                                        <div class="col-lg-6">
                                                             <label class="col-form-label"></i> Tipo Interés (*): </label>
                                                             <select id="txttipint" name="txttipint" class="form-control " style="width: 100%;">
                                                                 <option value="FIJ">Monto Fijo Gs.</option>
@@ -83,21 +83,21 @@
                                                             </select>
                                                         </div>
 
-                                                        <div class="col-lg-2">
+                                                        <div class="col-lg-6">
                                                             <label class="col-form-label"></i> Gs. interés por atraso: </label>
                                                             <div class="input-group-prepend">
                                                                 <input type="number" id="txtmonint" name="txtmonint" min="0" value="0" inputmode="numeric" class="form-control" required></input>
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-lg-2">
+                                                        <div class="col-lg-6">
                                                             <label class="col-form-label"></i> % de interés por atraso: </label>
                                                             <div class="input-group-prepend">
                                                                 <input type="number" id="txtporint" name="txtporint" min="0" value="0" inputmode="numeric" class="form-control" required></input>
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-lg-3">
+                                                        <div class="col-lg-6">
                                                             <label class="col-form-label"></i> Monto Cuota: </label>
                                                             <div class="input-group-prepend">
                                                                 <input type="number" id="txtmoncuo" name="txtmoncuo" min="0" inputmode="numeric" class="form-control" required></input>
@@ -135,7 +135,7 @@
                                                         <div class="col-lg-4">
 
                                                         </div>
-                                                        <div class="col-lg-4">
+                                                        <div class="col-lg-6">
                                                             <div class="input-group mb-3">
                                                                 <div class="input-group-prepend">
                                                                     <span class="input-group-text"> <i class="fas fa-calculator"></i>*Total Pagaré: </span>

@@ -123,7 +123,7 @@ function agregarDetalle() {
 
             }
             else if (tipven == 'SEM') {
-                fecha.setDate(fecha.getDate() + 7);
+                fecha.setDate(fecha.getDate() + 8);
             }
             else if (tipven == 'MES') {
                 fecha.setDate(fecha.getMonth() + 1);
