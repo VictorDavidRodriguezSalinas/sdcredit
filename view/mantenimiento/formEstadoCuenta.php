@@ -1,5 +1,6 @@
 <form id="frmLisCierreCaja" method="POST" action="">
-
+<input type="text" name="txtidusu" id="txtidusu" class="form-control" value="<?php echo $_SESSION['idusu']; ?>"  hidden >
+<input type="text" name="txtnivusu" id="txtnivusu" class="form-control" value="<?php echo $_SESSION['nivusu']; ?>"  hidden >
 	<body onload="enviarPost();" class="">
 		<div class="align-content-center">
 			<section class="content">
@@ -9,21 +10,24 @@
 						<div class="col-md-12">
 							<div class="card card-success">
 								<div class="card-header">
-									<h3 class="card-title">Listado de Cierres de Caja</h3>
+									<h3 class="card-title">Estado de Cuentas</h3>
 								</div>
 								<div class="card-body">
 									<div class="table-responsive">
-										<table id="tabCierreCaja" name="tabCierreCaja" class="table table-bordered table-striped">
+										<table id="tabEstado" name="tabEstado" class="table table-bordered table-striped">
 											<thead>
-												<th>Id</th>
-												<th>Fecha apertura</th>
-												<th>Fecha cierre</th>
-												<th >Monto apertura</th>
-												<th >Cobros por ventas</th>
-												<th >Total ingresos</th>
-												<th >Total retiros</th>
-												<th >Total egresos</th>
-												<th >Monto cierre</th>
+                                                <th >Nº Pagaré</th>
+												<th >Ruc</th>
+												<th >Razón Social</th>
+                                                <th>Nº Cuota</th>
+												<th>Vencimiento</th>
+												<th >Monto cuota</th>
+                                                <th >Atraso días</th>
+												<th >Interés </th>
+                                                <th >Cobrado </th>
+												<th >A Cobrar</th>
+                                                <th >Estado</th>
+
 
 											</thead>
 											<tbody>
@@ -37,9 +41,9 @@
 													<th ></th>												
 													<th ></th>
 													<th ></th>
-												
-												
-													<th style="text-align:right">TOTAL :</th>
+                                                    <th ></th>
+                                                    <th ></th>
+													<th style="text-align:right">TOTAL A COBRAR :</th>
 													<th></th>
 												</tr>
 											</tfoot>
@@ -63,7 +67,7 @@
 		<script src="assets/popper/popper.min.js"></script>
 		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="assets/datatables/datatables.min.js"></script>
-		<script type="text/javascript" src="view/mantenimiento/formLisCierreCaja.js"></script>
+		<script type="text/javascript" src="view/mantenimiento/formEstadoCuenta.js"></script>
 
 	</body>
 </form>
