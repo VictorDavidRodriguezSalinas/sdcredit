@@ -88,14 +88,27 @@ $('#cmdGuardar').click(function (e) {
 
 });
 
+function limpiarDetalle(){
+    var tabCuotas = $('#tabCuotas').DataTable();
+    tabCuotas.clear().draw();
+    arrCuotas = [];
+    datosJSON = [];
+}
 
 function agregarDetalle() {
 
+    limpiarDetalle();
    
     const numpgr = document.getElementById("txtnumpgr").value;
     const tipven = document.getElementById("txttipven").value;
     const tipint = document.getElementById("txttipint").value;
-    var fecha = new Date(document.getElementById("txtfeccuo").value);
+
+    const fechaInput = document.getElementById("txtfeccuo").value;
+    const fecha = new Date(fechaInput);
+    fecha.setMinutes(fecha.getMinutes() + fecha.getTimezoneOffset());
+    //var fecha = new Date(document.getElementById("txtfeccuo").value);
+
+
     const moncuo = document.getElementById("txtmoncuo").value;
     const cancuo = document.getElementById("txtcancuo").value;
     const feccuo = formatearFechaYmd(fecha);
@@ -104,6 +117,7 @@ function agregarDetalle() {
     const idcli = document.getElementById("txtidcli").value;
     const idusu = document.getElementById("txtidusu").value;
     const moncre = document.getElementById("txtmoncre").value;
+
     if (moncre == 0) { swal({ title: "Ingrese monto del crédito !!!", text: "", icon: "warning", timer: "1200", }); document.getElementById("txtmoncre").focus(); throw ''; }
     if (idcli == '') { swal({ title: "Seleccione el Cliente !!!", text: "", icon: "warning", timer: "1200", }); document.getElementById("txtidcli").focus(); throw ''; }
     if (numpgr == '') { swal({ title: "Ingrese número de pagaré !!!", text: "", icon: "warning", timer: "1200", }); document.getElementById("txtnumpgr").focus(); throw ''; }
@@ -123,7 +137,7 @@ function agregarDetalle() {
 
             }
             else if (tipven == 'SEM') {
-                fecha.setDate(fecha.getDate() + 8);
+                fecha.setDate(fecha.getDate() + 7);
             }
             else if (tipven == 'MES') {
                 fecha.setDate(fecha.getMonth() + 1);
