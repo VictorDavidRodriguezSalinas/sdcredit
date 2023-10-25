@@ -143,6 +143,10 @@ function agregarDetalle() {
                 fecha.setDate(fecha.getMonth() + 1);
 
             }
+            else if (tipven == 'QUI') {
+                fecha.setDate(fecha.getDate() + 14);
+
+            }
         }
         arrCuotas.push([i + 1, formatearFecha(fecha), moncuo, formatearFechaYmd(fecha)]);
         tot += parseFloat(moncuo);

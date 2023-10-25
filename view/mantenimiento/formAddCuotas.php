@@ -55,7 +55,7 @@
                                                         <div class="col-lg-6">
                                                             <label class="col-form-label"></i>Cuotas: </label>
                                                             <div class="input-group-prepend">
-                                                                <input type="number" id="txtcancuo" name="txtcancuo" min="1" value="1" class="form-control"></input>
+                                                                <input type="number" id="txtcancuo" name="txtcancuo" min="1" value="7" class="form-control"></input>
                                                             </div>
                                                         </div>
 
@@ -68,9 +68,10 @@
                                                         <div class="col-lg-6">
                                                             <label class="col-form-label"></i> Tipo Vencimiento (*): </label>
                                                             <select id="txttipven" name="txttipven" class="form-control " style="width: 100%;">
-                                                                <option value="DIA">Diario</option>
                                                                 <option value="SEM">Semanal</option>
+                                                                <option value="QUI">Quincenal</option>
                                                                 <option value="MES">Mensual</option>
+                                                                <option value="DIA">Diario</option>
                                                             </select>
                                                         </div>
 
