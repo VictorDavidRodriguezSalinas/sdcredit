@@ -5,7 +5,7 @@ $fechaActual = date("d-m-Y");
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -74,6 +74,15 @@ $fechaActual = date("d-m-Y");
   <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
 
+  <style type="text/css">
+/* Estilo personalizado para imprimir el footer */
+@media print {
+  table.table tfoot {
+    display: table-row-group; /* Asegura que el footer se muestre en la impresión */
+  }
+}
+
+</style>
 
 </head>
 <script language="javascript" src="dist/js/alerts/alertifyjs/alertify.min.js"></script>

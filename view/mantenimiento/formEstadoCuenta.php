@@ -43,10 +43,10 @@
 													<th></th>
 													<th></th>
 													<th></th>
-													<th></th>
-													<th></th>
-													<th></th>
-													<th style="text-align:right">TOTAL A COBRAR :</th>
+													<th style="text-align:right">TOTALES:</th>
+													<th id="totInteres"></th>
+													<th id="totCobrado"></th>
+													<th id="totSaldo"></th>
 													<th></th>
 												</tr>
 											</tfoot>
