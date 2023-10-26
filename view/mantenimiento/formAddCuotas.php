@@ -15,7 +15,6 @@
                                             <label class="col-form-label"></i> Nº Pagaré (*): </label>
                                             <input type="number" id="txtnumpgr" name="txtnumpgr" min="1" value="1" class="form-control" required readonly></input>
                                         </div>
-
                                         <div class="col-lg-3">
                                             <label class="col-form-label"></i>Ruc (*): </label>
                                             <div class="input-group-prepend">
