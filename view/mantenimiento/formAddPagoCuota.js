@@ -63,7 +63,8 @@ function cargarCuotas(id) {
 		type: 'POST',
 		data: { param: parametros + '', procedure: 'lis_cuotaspen' },
 		success: function (res) {
-			console.log(res);
+
+			//console.log(res);
 
 			var js = JSON.parse(res);
 
@@ -118,18 +119,30 @@ function seleccionarCuota() {
 		tipven = " Semanas";
 		$("#txtatraso").val(arrCuota[0].sem_atraso + " " + tipven);
 	}
+	else if (arrCuota[0].tipven == 'QUI') {
+		tipven = " Quincenas";
+		$("#txtatraso").val(arrCuota[0].sem_atraso + " " + tipven);
+	}
 	else if (arrCuota[0].tipven == 'MES') {
 		tipven = " Mes/es";
 		$("#txtatraso").val(arrCuota[0].dias_atraso / 30 + " " + tipven);
 	}
-	$("#txtmoncuo").val(formaterNumero(parseFloat(arrCuota[0].moncuo)));
 
 
-	$("#txtintacu").val(formaterNumero(parseFloat(arrCuota[0].intacu)));
+	$("#txtmoncuo").val(formatNumberToParaguayan(parseInt(arrCuota[0].moncuo)));
 
 
+	$("#txtintacu").val(formatNumberToParaguayan(parseInt(arrCuota[0].intacu)));
 
-	$("#txtmonpag").val(formaterNumero(parseFloat(arrCuota[0].monpag)));
+	// const number = arrCuota[0].monpag;
+	// const formattedNumber = formatNumberToParaguayan(number);
+	// console.log(formattedNumber);
+
+	// const inputElement = document.getElementById("txtmonpag");
+  	// inputElement.value = numeroFormateado;
+
+
+	$("#txtmonpag").val(formatNumberToParaguayan(parseInt(arrCuota[0].monpag)));
 
 
 
@@ -145,6 +158,7 @@ function obtenerDatosCuota(idcuo) {
 			arrCuota.push(arrCuotas[i]);
 		}
 	}
+
 
 }
 
@@ -214,3 +228,8 @@ function formaterNumero(numero) {
 	return numeroFormateado;
 }
 
+function formatNumberToParaguayan(number) {
+
+	return new Intl.NumberFormat('es-PY', { style: 'decimal' }).format(number);
+  }
+  

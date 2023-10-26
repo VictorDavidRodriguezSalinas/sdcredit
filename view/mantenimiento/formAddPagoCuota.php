@@ -25,7 +25,7 @@
                                                     <div class="row">
                                                         <input type="text" name="txtOPEPAG" id="txtOPEPAG" class="form-control" placeholder="OPE" value="GUA" hidden>
 
-                                                        <div class="col-lg-3">
+                                                        <div class="col-lg-4">
                                                             <label class="col-form-label"></i>Fecha Pago: </label>
                                                             <div class="input-group-prepend">
                                                                 <input type="date" id="txtfecpag" name="txtfecpag" value="<?php echo date('Y-m-d'); ?>" class="form-control" required></input>
@@ -44,7 +44,7 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-lg-6">
+                                                        <div class="col-lg-5">
                                                             <label class="col-form-label"></i> Razón Social (*): </label>
                                                             <input type="text" id="txtRazCli" name="txtRazCli" class="form-control" required readonly></input>
                                                         </div>
@@ -55,7 +55,7 @@
                                                         </div>
 
 
-                                                        <div class="col-lg-3">
+                                                        <div class="col-lg-6">
                                                             <div class="input-group mb-3">
                                                                 <div class="input-group-prepend">
                                                                     <span class="input-group-text"> <i class="fas "> Nº Cuota</i> </span>
@@ -67,7 +67,7 @@
 
 
 
-                                                        <div class="col-lg-3">
+                                                        <div class="col-lg-6">
                                                             <div class="input-group mb-3">
                                                                 <div class="input-group-prepend">
                                                                     <span class="input-group-text"> <i class="fas fa-calculator"> Monto:</i> </span>
@@ -76,7 +76,7 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-lg-3">
+                                                        <div class="col-lg-6">
                                                             <div class="input-group mb-3">
                                                                 <div class="input-group-prepend">
                                                                     <span class="input-group-text"> <i class="fas fa-calculator"> Atraso:</i> </span>
@@ -84,7 +84,7 @@
                                                                 <input type="text" name="txtatraso" id="txtatraso" class="form-control" readonly>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-3">
+                                                        <div class="col-lg-6">
                                                             <div class="input-group mb-3">
                                                                 <div class="input-group-prepend">
                                                                     <span class="input-group-text"> <i class="fas fa-calculator"> Interés:</i> </span>
@@ -94,7 +94,7 @@
                                                         </div>
 
 
-                                                        <div class="col-lg-3">
+                                                        <div class="col-lg-6">
                                                             <div class="input-group mb-3">
                                                                 <div class="input-group-prepend">
                                                                     <span class="input-group-text"> <i class="fas fa-money-bill"> Monto a pagar:</i> </span>

@@ -131,7 +131,7 @@ function agregarDetalle() {
     var i = 0;
     let tot = 0;
     while (i < cancuo) {
-        if (i => 0) {
+        if (i > 0) {
             if (tipven == 'DIA') {
                 fecha.setDate(fecha.getDate() + 1);
 
