@@ -3,9 +3,9 @@ var arrCuota = [];
 var id=0;
 // Obtén una referencia al elemento select
 var select = document.getElementById('dtcCUO');
-
+var selectPagare = document.getElementById('dtcPGR');
 $(function () {
-
+	cargarPagares()
 
 });
 
@@ -53,18 +53,25 @@ $('#cmdGuardar').click(function (e) {
 
 function cargarCuotas(id) {
 	var inputDate = document.getElementById("txtfecpag");
+
+	var pagare = document.getElementById("dtcPGR");
+	
+	var numpgr =pagare.value;
+
+	
+
 	var valorDate = inputDate.value;
 
-	var parametros = "'" + id + "'," + "'" + valorDate + "'";
-
+	var parametros = "'" + id + "'," + "'" + valorDate + "'," + "'" + numpgr + "'";
+	console.log(parametros+'');
 
 	$.ajax({
 		url: 'controller/listarProcedure.php',
 		type: 'POST',
-		data: { param: parametros + '', procedure: 'lis_cuotaspen' },
+		data: { param: parametros, procedure: 'lis_cuotaspen' },
 		success: function (res) {
 
-			//console.log(res);
+			console.log(res);
 
 			var js = JSON.parse(res);
 
@@ -81,6 +88,8 @@ function cargarCuotas(id) {
 			for (var i = 0; i < js.length; i++) {
 				$("#dtcCUO").append('<option value="' + js[i].idcuo + '">' + js[i].numcuo + "/" + js[i].cancuo + " - Vence: " + js[i].fecven + '</option>');
 			}
+
+		
 
 			seleccionarCuota();
 
@@ -101,6 +110,18 @@ function cargarCuotas(id) {
 select.addEventListener('change', function () {
 	// Obtiene el valor seleccionado
 	seleccionarCuota();
+
+
+});
+
+// Agrega un oyente de eventos al elemento select
+selectPagare.addEventListener('change', function () {
+	// Obtiene el valor seleccionado
+	if (id){
+		cargarCuotas(id);
+		seleccionarCuota();
+	
+	}
 
 
 });
@@ -147,6 +168,21 @@ function seleccionarCuota() {
 
 
 
+}
+
+function cargarPagares() {
+    $.ajax({
+        url: 'controller/listarTabla.php',
+        type: 'POST',
+        data: {opcion:'cuotas GROUP BY numpgr'},
+        success: function(res){
+          var js= JSON.parse(res);
+            for (var i = 0; i < js.length; i++) {
+              $("#dtcPGR").append('<option value="'+js[i].numpgr+'">'+js[i].numpgr+'</option>');
+            }
+          
+        }
+      });   
 }
 
 function obtenerDatosCuota(idcuo) {
@@ -207,6 +243,7 @@ function listClientes() {
 
 	});
 }
+
 //seleccionar cliente de modal       
 $(document).on("click", ".btnSeleccionar", function (e) {
 	fila = $(this).closest("tr");

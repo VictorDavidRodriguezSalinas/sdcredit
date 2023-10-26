@@ -59,7 +59,7 @@
                                                         </div>
 
                                                         <div class="col-lg-6">
-                                                            <label class="col-form-label"></i>Fecha Cuota 1: </label>
+                                                            <label class="col-form-label"></i>Fecha Entrega: </label>
                                                             <div class="input-group-prepend">
                                                                 <input type="date" id="txtfeccuo" name="txtfeccuo" value="<?php echo date('Y-m-d'); ?>" class="form-control" required></input>
                                                             </div>

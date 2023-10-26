@@ -6,9 +6,9 @@ error_reporting(E_ALL);
 
 $DateAndTime = date('mdYsiH', time());
 $archivo=$DateAndTime."buckup.sql";
-$database = 'sisgandb';
-$user = 'admin';
-$pass = 'brickman';
+$database = 'sdinfco_sdcredit';
+$user = 'sdinfco_admin';
+$pass = 'brickman2017';
 $host = 'localhost';
 $dir = dirname(__FILE__) . '/'.$archivo;
 

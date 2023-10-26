@@ -140,7 +140,7 @@ function agregarDetalle() {
                 fecha.setDate(fecha.getDate() + 7);
             }
             else if (tipven == 'MES') {
-                fecha.setDate(fecha.getMonth() + 1);
+                fecha.setMonth(fecha.getMonth() + 1);
 
             }
             else if (tipven == 'QUI') {
@@ -148,6 +148,8 @@ function agregarDetalle() {
 
             }
         }
+        console.log(tipven);
+        console.log(fecha);
         arrCuotas.push([i + 1, formatearFecha(fecha), moncuo, formatearFechaYmd(fecha)]);
         tot += parseFloat(moncuo);
         //table.row.add([i + 1, fechaFormateada, moncuo]).draw();

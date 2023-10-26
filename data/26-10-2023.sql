@@ -53,7 +53,7 @@ CREATE TABLE `auditoria` (
   `datact` varchar(250) NOT NULL,
   `usuario` varchar(100) NOT NULL,
   PRIMARY KEY (`idaud`)
-) ENGINE=InnoDB AUTO_INCREMENT=178 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_spanish2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=197 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_spanish2_ci;
 
 /*Data for the table `auditoria` */
 
@@ -88,6 +88,25 @@ insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) 
 insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (175,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"22\", \"Fecha\": \"2023-10-26\", \"Monto\": \"1744\"}]','Jorge Rodriguez');
 insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (176,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"23\", \"Fecha\": \"2023-10-26\", \"Monto\": \"1744\"}]','Jorge Rodriguez');
 insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (177,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"24\", \"Fecha\": \"2023-10-26\", \"Monto\": \"1744\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (178,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"20\", \"Fecha\": \"2023-10-26\", \"Monto\": \"1744\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (179,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"21\", \"Fecha\": \"2023-10-26\", \"Monto\": \"174400\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (180,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"22\", \"Fecha\": \"2023-10-26\", \"Monto\": \"162400\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (181,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"23\", \"Fecha\": \"2023-10-26\", \"Monto\": \"150400\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (182,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"24\", \"Fecha\": \"2023-10-26\", \"Monto\": \"138400\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (183,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"25\", \"Fecha\": \"2023-10-26\", \"Monto\": \"99000\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (184,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"26\", \"Fecha\": \"2023-10-26\", \"Monto\": \"112000\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (185,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"27\", \"Fecha\": \"2023-10-26\", \"Monto\": \"102000\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (186,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"28\", \"Fecha\": \"2023-10-26\", \"Monto\": \"112000\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (187,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"29\", \"Fecha\": \"2023-10-26\", \"Monto\": \"112000\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (188,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"30\", \"Fecha\": \"2023-10-26\", \"Monto\": \"152000\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (189,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"31\", \"Fecha\": \"2023-10-26\", \"Monto\": \"112000\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (190,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"32\", \"Fecha\": \"2023-10-26\", \"Monto\": \"102000\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (191,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"33\", \"Fecha\": \"2023-10-26\", \"Monto\": \"112000\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (192,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"34\", \"Fecha\": \"2023-10-26\", \"Monto\": \"112000\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (193,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"35\", \"Fecha\": \"2023-10-26\", \"Monto\": \"102000\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (194,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"36\", \"Fecha\": \"2023-10-26\", \"Monto\": \"112000\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (195,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"37\", \"Fecha\": \"2023-10-26\", \"Monto\": \"102000\"}]','Jorge Rodriguez');
+insert  into `auditoria`(`idaud`,`nomtab`,`opetab`,`datvie`,`datact`,`usuario`) values (196,'pagocuotas','Pago Cuotas','','[{\"Codigo\": \"38\", \"Fecha\": \"2023-10-26\", \"Monto\": \"95000\"}]','Jorge Rodriguez');
 
 /*Table structure for table `cierrecaja` */
 
@@ -164,6 +183,25 @@ insert  into `clientes`(`idcli`,`ruccli`,`nomcli`,`apecli`,`telcli`,`idusu`) val
 insert  into `clientes`(`idcli`,`ruccli`,`nomcli`,`apecli`,`telcli`,`idusu`) values (15,'4.232.163','Ricardo Celestino','Gimenez Pedrozo','0975576145',1);
 insert  into `clientes`(`idcli`,`ruccli`,`nomcli`,`apecli`,`telcli`,`idusu`) values (16,'4.957.685','Eduardo Ramon','Insaurralde Prieto','0972690429',1);
 insert  into `clientes`(`idcli`,`ruccli`,`nomcli`,`apecli`,`telcli`,`idusu`) values (17,'2.840.898','Bruno Gabriel','Gimenez Cardozo','0985778488',1);
+insert  into `clientes`(`idcli`,`ruccli`,`nomcli`,`apecli`,`telcli`,`idusu`) values (18,'5.954.766','Julia Elizabeth','Gomez Del Puerto','0975372002',1);
+insert  into `clientes`(`idcli`,`ruccli`,`nomcli`,`apecli`,`telcli`,`idusu`) values (19,'6.544.643','Maricel','Espinoza Muñoz','0985945604',1);
+insert  into `clientes`(`idcli`,`ruccli`,`nomcli`,`apecli`,`telcli`,`idusu`) values (20,'5.080.390','Laura Romina','Fernandez','0982556139',1);
+
+/*Table structure for table `clientesapi` */
+
+DROP TABLE IF EXISTS `clientesapi`;
+
+CREATE TABLE `clientesapi` (
+  `idcli` int(11) NOT NULL AUTO_INCREMENT,
+  `ruccli` varchar(30) NOT NULL,
+  `nomcli` varchar(150) NOT NULL,
+  `apecli` varchar(150) NOT NULL,
+  `telcli` varchar(100) NOT NULL,
+  `idusu` int(11) NOT NULL,
+  PRIMARY KEY (`idcli`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_spanish2_ci;
+
+/*Data for the table `clientesapi` */
 
 /*Table structure for table `cuotas` */
 
@@ -192,13 +230,13 @@ CREATE TABLE `cuotas` (
 
 /*Data for the table `cuotas` */
 
-insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (57,2,1,'2023-10-04','2023-10-11','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',116000.00,17,1,500000,7);
-insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (58,2,2,'2023-10-04','2023-10-18','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',106000.00,17,1,500000,7);
-insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (59,2,3,'2023-10-04','2023-10-25','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',96000.00,17,1,500000,7);
-insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (60,2,4,'2023-10-04','2023-11-01','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,17,1,500000,7);
-insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (61,2,5,'2023-10-04','2023-11-08','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,17,1,500000,7);
-insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (62,2,6,'2023-10-04','2023-11-15','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,17,1,500000,7);
-insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (63,2,7,'2023-10-04','2023-11-22','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,17,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (57,1,1,'2023-10-04','2023-10-11','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',116000.00,17,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (58,1,2,'2023-10-04','2023-10-18','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',106000.00,17,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (59,1,3,'2023-10-04','2023-10-25','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',96000.00,17,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (60,1,4,'2023-10-04','2023-11-01','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,17,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (61,1,5,'2023-10-04','2023-11-08','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,17,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (62,1,6,'2023-10-04','2023-11-15','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,17,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (63,1,7,'2023-10-04','2023-11-22','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,17,1,500000,7);
 insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (64,1,1,'2023-10-04','2023-10-11','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',116000.00,15,1,500000,7);
 insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (65,1,2,'2023-10-04','2023-10-18','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,15,1,500000,7);
 insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (66,1,3,'2023-10-04','2023-10-25','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,15,1,500000,7);
@@ -227,20 +265,83 @@ insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`monc
 insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (89,1,5,'2023-10-07','2023-11-11','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,3,1,500000,7);
 insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (90,1,6,'2023-10-07','2023-11-18','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,3,1,500000,7);
 insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (91,1,7,'2023-10-07','2023-11-25','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,3,1,500000,7);
-insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (92,1,1,'2023-09-23','2023-09-30','SEM',130000.00,'FIJ',12000.00,0.00,'SAL','PEN',0.00,5,1,700000,7);
-insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (93,1,2,'2023-09-23','2023-10-07','SEM',130000.00,'FIJ',12000.00,0.00,'PEN','PEN',0.00,5,1,700000,7);
-insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (94,1,3,'2023-09-23','2023-10-14','SEM',130000.00,'FIJ',12000.00,0.00,'PEN','PEN',0.00,5,1,700000,7);
-insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (95,1,4,'2023-09-23','2023-10-21','SEM',130000.00,'FIJ',12000.00,0.00,'PEN','PEN',0.00,5,1,700000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (92,1,1,'2023-09-23','2023-09-30','SEM',130000.00,'FIJ',12000.00,0.00,'CAN','PEN',176144.00,5,1,700000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (93,1,2,'2023-09-23','2023-10-07','SEM',130000.00,'FIJ',12000.00,0.00,'CAN','PEN',162400.00,5,1,700000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (94,1,3,'2023-09-23','2023-10-14','SEM',130000.00,'FIJ',12000.00,0.00,'CAN','PEN',150400.00,5,1,700000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (95,1,4,'2023-09-23','2023-10-21','SEM',130000.00,'FIJ',12000.00,0.00,'CAN','PEN',138400.00,5,1,700000,7);
 insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (96,1,5,'2023-09-23','2023-10-28','SEM',130000.00,'FIJ',12000.00,0.00,'PEN','PEN',0.00,5,1,700000,7);
 insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (97,1,6,'2023-09-23','2023-11-04','SEM',130000.00,'FIJ',12000.00,0.00,'PEN','PEN',0.00,5,1,700000,7);
 insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (98,1,7,'2023-09-23','2023-11-11','SEM',130000.00,'FIJ',12000.00,0.00,'PEN','PEN',0.00,5,1,700000,7);
-insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (99,2,1,'2023-10-07','2023-10-14','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,5,1,500000,7);
-insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (100,2,2,'2023-10-07','2023-10-21','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,5,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (99,2,1,'2023-10-07','2023-10-14','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',112000.00,5,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (100,2,2,'2023-10-07','2023-10-21','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',102000.00,5,1,500000,7);
 insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (101,2,3,'2023-10-07','2023-10-28','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,5,1,500000,7);
 insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (102,2,4,'2023-10-07','2023-11-04','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,5,1,500000,7);
 insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (103,2,5,'2023-10-07','2023-11-11','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,5,1,500000,7);
 insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (104,2,6,'2023-10-07','2023-11-18','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,5,1,500000,7);
 insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (105,2,7,'2023-10-07','2023-11-25','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,5,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (113,1,1,'2023-10-16','2023-10-23','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',99000.00,19,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (114,1,2,'2023-10-16','2023-10-30','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,19,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (115,1,3,'2023-10-16','2023-11-06','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,19,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (116,1,4,'2023-10-16','2023-11-13','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,19,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (117,1,5,'2023-10-16','2023-11-20','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,19,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (118,1,6,'2023-10-16','2023-11-27','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,19,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (119,1,7,'2023-10-16','2023-12-04','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,19,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (120,1,1,'2023-10-07','2023-10-14','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',112000.00,6,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (121,1,2,'2023-10-07','2023-10-21','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',102000.00,6,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (122,1,3,'2023-10-07','2023-10-28','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,6,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (123,1,4,'2023-10-07','2023-11-04','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,6,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (124,1,5,'2023-10-07','2023-11-11','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,6,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (125,1,6,'2023-10-07','2023-11-18','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,6,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (126,1,7,'2023-10-07','2023-11-25','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,6,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (127,1,1,'2023-10-07','2023-10-14','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',112000.00,7,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (128,1,2,'2023-10-07','2023-10-21','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,7,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (129,1,3,'2023-10-07','2023-10-28','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,7,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (130,1,4,'2023-10-07','2023-11-04','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,7,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (131,1,5,'2023-10-07','2023-11-11','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,7,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (132,1,6,'2023-10-07','2023-11-18','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,7,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (133,1,7,'2023-10-07','2023-11-25','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,7,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (134,1,1,'2023-10-07','2023-10-14','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',112000.00,4,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (135,1,2,'2023-10-07','2023-10-21','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,4,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (136,1,3,'2023-10-07','2023-10-28','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,4,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (137,1,4,'2023-10-07','2023-11-04','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,4,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (138,1,5,'2023-10-07','2023-11-11','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,4,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (139,1,6,'2023-10-07','2023-11-18','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,4,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (140,1,7,'2023-10-07','2023-11-25','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,4,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (141,1,1,'2023-09-09','2023-09-16','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',152000.00,18,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (142,1,2,'2023-09-09','2023-09-23','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,18,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (143,1,3,'2023-09-09','2023-09-30','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,18,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (144,1,4,'2023-09-09','2023-10-07','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,18,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (145,1,5,'2023-09-09','2023-10-14','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,18,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (146,1,6,'2023-09-09','2023-10-21','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,18,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (147,1,7,'2023-09-09','2023-10-28','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,18,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (148,1,1,'2023-10-07','2023-10-14','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',112000.00,8,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (149,1,2,'2023-10-07','2023-10-21','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,8,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (150,1,3,'2023-10-07','2023-10-28','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,8,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (151,1,4,'2023-10-07','2023-11-04','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,8,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (152,1,5,'2023-10-07','2023-11-11','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,8,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (153,1,6,'2023-10-07','2023-11-18','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,8,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (154,1,7,'2023-10-07','2023-11-25','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,8,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (155,2,1,'2023-10-21','2023-10-28','SEM',40000.00,'FIJ',4000.00,0.00,'PEN','PEN',0.00,8,1,200000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (156,2,2,'2023-10-21','2023-11-04','SEM',40000.00,'FIJ',4000.00,0.00,'PEN','PEN',0.00,8,1,200000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (157,2,3,'2023-10-21','2023-11-11','SEM',40000.00,'FIJ',4000.00,0.00,'PEN','PEN',0.00,8,1,200000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (158,2,4,'2023-10-21','2023-11-18','SEM',40000.00,'FIJ',4000.00,0.00,'PEN','PEN',0.00,8,1,200000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (159,2,5,'2023-10-21','2023-11-25','SEM',40000.00,'FIJ',4000.00,0.00,'PEN','PEN',0.00,8,1,200000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (160,2,6,'2023-10-21','2023-12-02','SEM',40000.00,'FIJ',4000.00,0.00,'PEN','PEN',0.00,8,1,200000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (161,2,7,'2023-10-21','2023-12-09','SEM',40000.00,'FIJ',4000.00,0.00,'PEN','PEN',0.00,8,1,200000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (162,1,1,'2023-10-07','2023-10-14','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',112000.00,2,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (163,1,2,'2023-10-07','2023-10-21','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',102000.00,2,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (164,1,3,'2023-10-07','2023-10-28','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,2,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (165,1,4,'2023-10-07','2023-11-04','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,2,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (166,1,5,'2023-10-07','2023-11-11','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,2,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (167,1,6,'2023-10-07','2023-11-18','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,2,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (168,1,7,'2023-10-07','2023-11-25','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,2,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (169,1,1,'2023-10-07','2023-10-14','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',112000.00,11,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (170,1,2,'2023-10-07','2023-10-21','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',102000.00,11,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (171,1,3,'2023-10-07','2023-10-28','SEM',95000.00,'FIJ',10000.00,0.00,'CAN','PEN',95000.00,11,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (172,1,4,'2023-10-07','2023-11-04','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,11,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (173,1,5,'2023-10-07','2023-11-11','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,11,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (174,1,6,'2023-10-07','2023-11-18','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,11,1,500000,7);
+insert  into `cuotas`(`idcuo`,`numpgr`,`numcuo`,`feccuo`,`fecven`,`tipven`,`moncuo`,`tipint`,`monint`,`porint`,`estcuo`,`estpgr`,`pagcuo`,`idcli`,`idusu`,`moncre`,`cancuo`) values (175,1,7,'2023-10-07','2023-11-25','SEM',95000.00,'FIJ',10000.00,0.00,'PEN','PEN',0.00,11,1,500000,7);
 
 /*Table structure for table `pagocuotas` */
 
@@ -253,7 +354,7 @@ CREATE TABLE `pagocuotas` (
   `idcuo` int(11) NOT NULL,
   `idapc` int(11) NOT NULL,
   PRIMARY KEY (`idpag`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_spanish2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_spanish2_ci;
 
 /*Data for the table `pagocuotas` */
 
@@ -276,6 +377,25 @@ insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (16,
 insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (17,'2023-10-26',99000,79,3);
 insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (18,'2023-10-26',112000,85,3);
 insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (19,'2023-10-26',102000,86,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (20,'2023-10-26',1744,92,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (21,'2023-10-26',174400,92,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (22,'2023-10-26',162400,93,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (23,'2023-10-26',150400,94,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (24,'2023-10-26',138400,95,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (25,'2023-10-26',99000,113,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (26,'2023-10-26',112000,120,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (27,'2023-10-26',102000,121,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (28,'2023-10-26',112000,127,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (29,'2023-10-26',112000,134,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (30,'2023-10-26',152000,141,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (31,'2023-10-26',112000,99,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (32,'2023-10-26',102000,100,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (33,'2023-10-26',112000,148,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (34,'2023-10-26',112000,162,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (35,'2023-10-26',102000,163,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (36,'2023-10-26',112000,169,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (37,'2023-10-26',102000,170,3);
+insert  into `pagocuotas`(`idpag`,`fecpag`,`monefe`,`idcuo`,`idapc`) values (38,'2023-10-26',95000,171,3);
 
 /*Table structure for table `pagogastos` */
 
@@ -357,10 +477,10 @@ insert  into `usuario`(`idusu`,`docusu`,`nomusu`,`logusu`,`clausu`,`nivusu`,`ids
 
 DELIMITER $$
 
-/*!50003 CREATE PROCEDURE `anular_pagare`(pnumpgr int)
+/*!50003 CREATE PROCEDURE `anular_pagare`(pnumpgr int, pidcli int)
 BEGIN
 	
-	delete from cuotas where numpgr=pnumpgr;
+	delete from cuotas where numpgr=pnumpgr and idcli=pidcli;
 
 	END */$$
 DELIMITER ;
@@ -462,12 +582,12 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE PROCEDURE `lis_cuotaspen`(idcl INT, fecpa date)
+/*!50003 CREATE PROCEDURE `lis_cuotaspen`(idcl INT, fecpa date,pnumpgr int)
 BEGIN
 
 		declare atraso integer;
 		select DATEDIFF(fecpa, fecven) into atraso FROM cuotas 
-			WHERE idcli = idcl AND pagcuo<moncuo
+			WHERE idcli = idcl and numpgr=pnumpgr AND pagcuo<moncuo
 			LIMIT 1;
 		
     
@@ -505,7 +625,7 @@ BEGIN
 				ELSE moncuo END AS UNSIGNED) AS monpag,
 				cancuo
 			FROM cuotas 
-			WHERE idcli = idcl AND pagcuo<moncuo
+			WHERE idcli = idcl AND pagcuo<moncuo AND numpgr=pnumpgr
 			ORDER BY numpgr,numcuo
 			limit 1;
     END */$$
@@ -632,6 +752,7 @@ DELIMITER $$
 BEGIN
 	
 	SELECT
+	idcli,
 c.numpgr,
 DATE_FORMAT(c.feccuo, '%d-%m-%Y') as feccuo,
 cl.`ruccli`,

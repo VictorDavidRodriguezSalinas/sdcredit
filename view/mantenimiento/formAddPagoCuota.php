@@ -25,12 +25,19 @@
                                                     <div class="row">
                                                         <input type="text" name="txtOPEPAG" id="txtOPEPAG" class="form-control" placeholder="OPE" value="GUA" hidden>
 
-                                                        <div class="col-lg-4">
+                                                        <div class="col-lg-3">
                                                             <label class="col-form-label"></i>Fecha Pago: </label>
                                                             <div class="input-group-prepend">
                                                                 <input type="date" id="txtfecpag" name="txtfecpag" value="<?php echo date('Y-m-d'); ?>" class="form-control" required></input>
                                                             </div>
                                                         </div>
+
+                                                        <div class="col-lg-3">
+                                                            <label class="col-form-label"></i> Nº Pagaré (*): </label>
+                                                            <select id="dtcPGR" name="dtcPGR" class="form-control" style="width: 100%;">
+                                                            </select>
+                                                        </div>
+
 
                                                         <div class="col-lg-3">
                                                             <label class="col-form-label"></i>Ruc (*): </label>
@@ -44,7 +51,7 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-lg-5">
+                                                        <div class="col-lg-3">
                                                             <label class="col-form-label"></i> Razón Social (*): </label>
                                                             <input type="text" id="txtRazCli" name="txtRazCli" class="form-control" required readonly></input>
                                                         </div>
