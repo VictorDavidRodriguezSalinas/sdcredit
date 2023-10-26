@@ -99,7 +99,7 @@
                                                                 <div class="input-group-prepend">
                                                                     <span class="input-group-text"> <i class="fas fa-money-bill"> Monto a pagar:</i> </span>
                                                                 </div>
-                                                                <input type="number" style="font-weight: bold; background-color: #bdd6ef" name="txtmonpag" min="0" id="txtmonpag" class="form-control" required>
+                                                                <input type="text" style="font-weight: bold; background-color: #bdd6ef" name="txtmonpag" min="0" id="txtmonpag" class="form-control" required>
                                                             </div>
                                                         </div>
 
