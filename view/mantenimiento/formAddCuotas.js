@@ -236,8 +236,6 @@ function formatearFechaYmd(fecha) {
     const anio = fecha.getFullYear();
     return `${anio}/${mes}/${dia}`;
 }
-
-
 function Enumerar(id) {
     $id=id;
     $.ajax({
