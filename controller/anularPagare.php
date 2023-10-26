@@ -2,8 +2,9 @@
 	require_once('../model/metodos.php');
    
    $numpgr = (isset($_POST['numpgr'])) ? $_POST['numpgr'] : '0';
+   $idcli = (isset($_POST['idcli'])) ? $_POST['idcli'] : '0';
   
-	$texto="'$numpgr'";
+	$texto="'$numpgr','$idcli'";
 	$cli=new Metodo();
 	$reg=$cli->Insertar($texto,'anular_pagare');
 

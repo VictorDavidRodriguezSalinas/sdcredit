@@ -3,7 +3,7 @@ var arrCuotas = [];
 var datosJSON = [];
 $(function () {
     // listClientes();
-    Enumerar();
+   // Enumerar();
 
 
 
@@ -131,7 +131,7 @@ function agregarDetalle() {
     var i = 0;
     let tot = 0;
     while (i < cancuo) {
-        if (i > 0) {
+        if (i >= 0) {
             if (tipven == 'DIA') {
                 fecha.setDate(fecha.getDate() + 1);
 
@@ -238,11 +238,12 @@ function formatearFechaYmd(fecha) {
 }
 
 
-function Enumerar() {
+function Enumerar(id) {
+    $id=id;
     $.ajax({
         url: 'controller/listarCamposTabla.php',
         type: 'POST',
-        data: { campos: 'IF(MAX(numpgr) IS NULL,1,MAX(numpgr)+1) AS ult', tabla: 'cuotas' },
+        data: { campos: 'IF(MAX(numpgr) IS NULL,1,MAX(numpgr)+1) AS ult', tabla: 'cuotas where idcli='+$id },
         success: function (res) {
             var js = JSON.parse(res);
             if (js[0].ult == null) {
@@ -269,6 +270,7 @@ $(document).on("click", ".btnSeleccionar", function (e) {
     $("#txtRucCli").val(ruccli);
     $("#txtRazCli").val(razcli);
     document.getElementById("txtmoncre").focus();
+    Enumerar(id);
 });
 
 

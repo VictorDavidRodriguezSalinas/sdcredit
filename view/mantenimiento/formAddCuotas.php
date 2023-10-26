@@ -13,7 +13,7 @@
                                     <div class="row">
                                         <div class="col-lg-2">
                                             <label class="col-form-label"></i> Nº Pagaré (*): </label>
-                                            <input type="number" id="txtnumpgr" name="txtnumpgr" min="1" class="form-control" required></input>
+                                            <input type="number" id="txtnumpgr" name="txtnumpgr" min="1" value="1" class="form-control" required readonly></input>
                                         </div>
 
                                         <div class="col-lg-3">

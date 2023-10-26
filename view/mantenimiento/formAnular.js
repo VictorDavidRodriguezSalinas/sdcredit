@@ -21,12 +21,13 @@ $(document).on("click", ".btnBorrar", function (e) {
 			if (willDelete) {
 				e.preventDefault();
 				fila = $(this).closest("tr");
-				numpgr = parseInt(fila.find('td:eq(1)').text()); //capturo el ID		
+                idcli = parseInt(fila.find('td:eq(1)').text());
+				numpgr = parseInt(fila.find('td:eq(2)').text()); //capturo el ID		
 				
 				$.ajax({
 					url: 'controller/anularPagare.php',
 					type: 'POST',
-					data: { numpgr: numpgr },
+					data: { numpgr: numpgr,idcli:idcli },
 					success: function (res) {
                       //  console.log(res);
 						var js = JSON.parse(res);
@@ -73,6 +74,7 @@ function listPagares() {
         },
         "columns": [
             { "defaultContent": "<div class='text-center'><div class='btn-group'><button data-dismiss='modal' class='btn btn-danger btn-sm btnBorrar'><i class='fas fa-ban'></i> Eliminar</button></div></div>" },
+            { "data": "idcli" },
             { "data": "numpgr" },
             { "data": "feccuo" },
             { "data": "ruccli" },
