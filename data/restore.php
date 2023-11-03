@@ -2,10 +2,10 @@
 $archivo=$_POST['archivo'];
 
 $dbHost     = 'localhost';
-$dbUsername = 'admin';
-$dbPassword = 'brickman';
-$dbName     = 'sisgandb';
-$filePath   = 'C:/xampp/htdocs/cattle/data/'.$archivo;
+$dbUsername = 'sdinfco_admin';
+$dbPassword = 'brickman2017';
+$dbName     = 'sdinfco_sdcredit';
+$filePath   = '/public_html/sdcredit/data'.$archivo;
 
 
 restoreDatabaseTables($dbHost, $dbUsername, $dbPassword, $dbName, $filePath);

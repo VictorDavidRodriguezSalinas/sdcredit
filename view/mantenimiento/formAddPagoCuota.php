@@ -24,7 +24,7 @@
                                                 <div class="card-body">
                                                     <div class="row">
                                                         <input type="text" name="txtOPEPAG" id="txtOPEPAG" class="form-control" placeholder="OPE" value="GUA" hidden>
-
+                                                      
                                                         <div class="col-lg-3">
                                                             <label class="col-form-label"></i>Fecha Pago: </label>
                                                             <div class="input-group-prepend">

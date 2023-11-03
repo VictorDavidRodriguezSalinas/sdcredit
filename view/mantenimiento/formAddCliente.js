@@ -4,8 +4,11 @@ $(function () {
 	cargarUsuarios();
 });
 function listCliente() {
-	param = "'LIS'";
-	procedure = "lis_cliente";
+
+	idusuario= document.getElementById("txtidusu").value;
+	nivusu= document.getElementById("txtnivusu").value;
+	
+	
 	$.fn.dataTable.ext.errMode = 'throw';
 	tablaCliente = $('#tabCliente').DataTable({
 		"paging": true,
@@ -15,7 +18,7 @@ function listCliente() {
 		"ajax": {
 			"url": "controller/listarProcedure.php",
 			"method": 'POST', //usamos el metodo POST
-			"data": { param: param, procedure: procedure }, //enviamos opcion 4 para que haga un SELECT
+			"data": { param: "'"+idusuario+"',"+"'"+nivusu+"'", procedure: 'lis_cliente' }, //enviamos opcion 4 para que haga un SELECT
 			"dataSrc": ""
 		},
 		"columns": [

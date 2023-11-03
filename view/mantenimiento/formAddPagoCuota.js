@@ -14,41 +14,62 @@ $('#cmdGuardar').click(function (e) {
 
 	ope = document.getElementById("txtOPEPAG").value;
 	e.preventDefault();
-	$.ajax({
-		url: 'controller/manPago.php',
-		type: 'POST',
-		data: $('#frmAddPagoCuota').serialize(),
-		success: function (res) {
-			console.log(res);
-			var js = JSON.parse(res);
-			if (js.estado == 'err') {
 
-				swal({ title: "No se pudo registrar el pago", text: "", icon: "warning", timer: "1250", });
-				return;
-			}
-			else if (js.estado == 'ok') {
-
-				if (ope === 'GUA') {
-
-
-					var miSelect = document.getElementById("dtcCUO");
-
-					// Elimina todas las opciones dentro del select
-					while (miSelect.options.length > 0) {
-						miSelect.remove(0);
+	swal({
+		title: "Desea registrar el pago?",
+		text: "",
+		icon: "success",
+		buttons: {
+			cancel: "NO",
+			confirm: "SI",
+		},
+		dangerMode: false,
+	})
+		.then((willDelete) => {
+			if (willDelete) {
+				$.ajax({
+					url: 'controller/manPago.php',
+					type: 'POST',
+					data: $('#frmAddPagoCuota').serialize(),
+					success: function (res) {
+						console.log(res);
+						var js = JSON.parse(res);
+						if (js.estado == 'err') {
+			
+							swal({ title: "No se pudo registrar el pago", text: "", icon: "warning", timer: "1250", });
+							return;
+						}
+						else if (js.estado == 'ok') {
+			
+							if (ope === 'GUA') {
+			
+			
+								var miSelect = document.getElementById("dtcCUO");
+			
+								// Elimina todas las opciones dentro del select
+								while (miSelect.options.length > 0) {
+									miSelect.remove(0);
+								}
+								swal({ title: "Registrado", text: "exitosamente!!!", icon: "success", timer: "1250", });
+								cargarCuotas(id);
+								
+								
+			
+							}
+							else {
+								swal({ title: "Actualizado", text: "exitosamente!!!", icon: "success", timer: "1250", });
+							}
+						}
 					}
-					swal({ title: "Registrado", text: "exitosamente!!!", icon: "success", timer: "1250", });
-					cargarCuotas(id);
-					
-					
+				});
 
-				}
-				else {
-					swal({ title: "Actualizado", text: "exitosamente!!!", icon: "success", timer: "1250", });
-				}
+
 			}
-		}
-	});
+		});
+
+
+
+
 });
 
 function cargarCuotas(id) {
