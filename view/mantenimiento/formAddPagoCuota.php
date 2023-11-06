@@ -24,7 +24,9 @@
                                                 <div class="card-body">
                                                     <div class="row">
                                                         <input type="text" name="txtOPEPAG" id="txtOPEPAG" class="form-control" placeholder="OPE" value="GUA" hidden>
-                                                      
+                                                        <input type="text" name="txtidusu" id="txtidusu" class="form-control" value="<?php echo $_SESSION['idusu']; ?>" >
+                                                        <input type="text" name="txtnivusu" id="txtnivusu" class="form-control" value="<?php echo $_SESSION['nivusu']; ?>" hidden>
+
                                                         <div class="col-lg-3">
                                                             <label class="col-form-label"></i>Fecha Pago: </label>
                                                             <div class="input-group-prepend">
@@ -47,7 +49,7 @@
                                                                 <input type="text" name="txtnivusu" id="txtnivusu" class="form-control" value="<?php echo $_SESSION['nivusu']; ?>" hidden>
                                                                 <input id="txtRucCli" name="txtRucCli" class="form-control" required readonly></input>
                                                                 <!-- Button trigger modal -->
-                                                                <button type="button" onclick="listClientes()" class="btn btn-outline-info" data-toggle="modal" data-target="#modal-clientes"><i class="fas fa-search"></i></button>
+                                                                <button id="btnClientes" type="button" onclick="listClientes()" class="btn btn-outline-info" data-toggle="modal" data-target="#modal-clientes"><i class="fas fa-search"></i></button>
                                                             </div>
                                                         </div>
 

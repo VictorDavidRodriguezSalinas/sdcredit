@@ -1,6 +1,7 @@
 $(function () {
     
     listPagares();
+    ocultarColumna(1);
   
 });
 
@@ -23,7 +24,8 @@ $(document).on("click", ".btnBorrar", function (e) {
 				fila = $(this).closest("tr");
                 idcli = parseInt(fila.find('td:eq(1)').text());
 				numpgr = parseInt(fila.find('td:eq(2)').text()); //capturo el ID		
-				
+				console.log('cliente:'+idcli);
+                console.log('pagare:'+numpgr);
 				$.ajax({
 					url: 'controller/anularPagare.php',
 					type: 'POST',
@@ -55,6 +57,17 @@ $(document).on("click", ".btnBorrar", function (e) {
 
 });
 
+function ocultarColumna(columnIndex) {
+    var table = document.getElementById('tabEstado');
+    var rows = table.getElementsByTagName('tr');
+  
+    for (var i = 0; i < rows.length; i++) {
+      var cells = rows[i].getElementsByTagName('td');
+      if (cells.length > columnIndex) {
+        cells[columnIndex].style.display = 'none';
+      }
+    }
+  }
 
 function listPagares() {
     

@@ -177,9 +177,7 @@ $fechaActual = date("d-m-Y");
                     break;
 
                   case 'Cliente':
-                    if ($_SESSION['nivusu'] == 2) {
-                      break;
-                    };
+                 
                     require "view/mantenimiento/formAddCliente.php";
                     break;
                   case 'Clientes':
@@ -198,6 +196,9 @@ $fechaActual = date("d-m-Y");
                   case 'Creditos':
                     require "view/mantenimiento/formEstadoCuenta.php";
                     break;
+                    case 'Morosos':
+                      require "view/mantenimiento/formLisMorosos.php";
+                      break;
                     case 'anular':
                       require "view/mantenimiento/formAnular.php";
                       break;

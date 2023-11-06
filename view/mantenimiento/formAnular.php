@@ -18,6 +18,7 @@
                                         <table id="tabEstado" name="tabEstado" class="table table-bordered table-striped">
                                             <thead>
                                                 <th>Operación</th>
+                                                <th>Id</th>
                                                 <th>Nº Pagaré</th>
                                                 <th>Fecha Reg.</th>
                                                 <th>Ruc</th>

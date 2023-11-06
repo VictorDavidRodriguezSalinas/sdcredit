@@ -100,6 +100,13 @@
               </a>
             </li>
 
+            <li class="nav-item">
+              <a href="Morosos" class="nav-link">
+                <i class="far fa-circle nav-icon text-danger"></i>
+                <p>Lista de Morosos </p>
+              </a>
+            </li>
+
             <li class="nav-item" <?php if ($_SESSION['nivusu'] == 2) {
                                     echo ("hidden");
                                   }; ?>>

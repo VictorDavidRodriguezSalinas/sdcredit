@@ -14,8 +14,8 @@
                   <div class="card-body">
                     <input type="text" name="txtidcli" id="txtidcli" class="form-control" value="0" placeholder="ID" hidden>
                     <input type="text" name="txtOPE" id="txtOPE" class="form-control" placeholder="OPE" value="GUA" hidden>
-                    <input type="text" name="txtidusu" id="txtidusu" class="form-control" value="<?php echo $_SESSION['idusu']; ?>" >
-                    <input type="text" name="txtnivusu" id="txtnivusu" class="form-control" value="<?php echo $_SESSION['nivusu']; ?>" >
+                    <input type="text" name="txtidusu" id="txtidusu" class="form-control" value="<?php echo $_SESSION['idusu']; ?>" hidden >
+                    <input type="text" name="txtnivusu" id="txtnivusu" class="form-control" value="<?php echo $_SESSION['nivusu']; ?>" hidden>
                                                               
 
                     <div class="col-lg-12">

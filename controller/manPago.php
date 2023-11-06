@@ -1,6 +1,6 @@
 <?php
 
-try {
+ try {
 	require_once('../model/metodos.php');
    $ope = (isset($_POST['txtOPEPAG'])) ? $_POST['txtOPEPAG'] : 'GUA';
 	 if ($ope='GUA')
