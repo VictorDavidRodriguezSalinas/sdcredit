@@ -121,6 +121,21 @@
                                                             </div>
                                                         </div>
 
+                                                        <div class="col-sm-6" hidden>
+                                                            <!-- checkbox -->
+                                                            <div class="form-group clearfix">
+                                                                <div class="icheck-success d-inline">
+                                                                    <input type="checkbox" id="checkboxPrimary1" name="optCAN" >
+                                                                    <label for="checkboxPrimary1">
+                                                                        Cancelar Cuota
+                                                                    </label>
+                                                                </div>
+                                                                
+                                                               
+                                                            </div>
+                                                        </div>
+
+
 
 
 
