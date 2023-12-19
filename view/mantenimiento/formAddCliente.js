@@ -94,7 +94,8 @@ $('#frmAddCliente').submit(function (e) {
 		data: $('#frmAddCliente').serialize(),
 		success: function (res) {
 			var js = JSON.parse(res);
-			//console.log((js.texto));
+			console.log(js.texto);
+			
 			if (js.estado == 'no') {
 
 				swal({ title: "Ya existe otro cliente con el mismo Ruc", text: "", icon: "warning", timer: "1250", });
@@ -139,6 +140,11 @@ $(document).on("click", ".btnEditar", function (e) {
 				$("#txtApeCli").val(js[i].apecli);
 				$("#txtTelCli").val(js[i].telcli);
 				$("#dtcUSU").val(js[i].idusu);
+				$("#txtCiuCli").val(js[i].ciucli);
+				$("#txtDirCli").val(js[i].dircli);
+				$("#txtBarCli").val(js[i].barcli);
+				$("#txtRef1").val(js[i].refcli1);
+				$("#txtRef2").val(js[i].refcli2);
 				$("#txtRucCli").focus();
 				window.scrollTo({ top: 0, behavior: 'smooth' });
 				

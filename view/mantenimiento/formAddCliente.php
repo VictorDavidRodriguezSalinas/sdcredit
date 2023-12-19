@@ -57,6 +57,16 @@
                       <label class="col-form-label"></i> Barrio (*): </label>
                       <input type="text" name="txtBarCli" id="txtBarCli" class="form-control" required>
                     </div>
+                    <div class="col-lg-12">
+                      <label class="col-form-label"></i> Referencia Personal 1 (*): </label>
+                      <input type="text" name="txtRef1" id="txtRef1" class="form-control" required>
+                    </div>
+                    
+                    <div class="col-lg-12">
+                      <label class="col-form-label"></i> Referencia Personal 2 (*): </label>
+                      <input type="text" name="txtRef2" id="txtRef2" class="form-control" required>
+                    </div>
+                    
 
 
                   </div>

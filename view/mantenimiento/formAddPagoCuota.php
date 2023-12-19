@@ -24,7 +24,7 @@
                                                 <div class="card-body">
                                                     <div class="row">
                                                         <input type="text" name="txtOPEPAG" id="txtOPEPAG" class="form-control" placeholder="OPE" value="GUA" hidden>
-                                                        <input type="text" name="txtidusu" id="txtidusu" class="form-control" value="<?php echo $_SESSION['idusu']; ?>" >
+                                                        <input type="text" name="txtidusu" id="txtidusu" class="form-control" value="<?php echo $_SESSION['idusu']; ?>" hidden>
                                                         <input type="text" name="txtnivusu" id="txtnivusu" class="form-control" value="<?php echo $_SESSION['nivusu']; ?>" hidden>
 
                                                         <div class="col-lg-3">
@@ -64,7 +64,7 @@
                                                         </div>
 
 
-                                                        <div class="col-lg-6">
+                                                        <div class="col-lg-4">
                                                             <div class="input-group mb-3">
                                                                 <div class="input-group-prepend">
                                                                     <span class="input-group-text"> <i class="fas "> Nº Cuota</i> </span>
@@ -76,7 +76,16 @@
 
 
 
-                                                        <div class="col-lg-6">
+                                                        <div class="col-lg-4">
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"> <i class="fas fa-calculator"> Pagado:</i> </span>
+                                                                </div>
+                                                                <input type="text" name="txtpagcuo" id="txtpagcuo" class="form-control" readonly>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-4">
                                                             <div class="input-group mb-3">
                                                                 <div class="input-group-prepend">
                                                                     <span class="input-group-text"> <i class="fas fa-calculator"> Monto:</i> </span>

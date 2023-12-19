@@ -190,7 +190,7 @@ function seleccionarCuota() {
 		$("#txtatraso").val(arrCuota[0].dias_atraso / 30 + " " + tipven);
 	}
 
-
+	$("#txtpagcuo").val(formatNumberToParaguayan(parseInt(arrCuota[0].pagcuo)));
 	$("#txtmoncuo").val(formatNumberToParaguayan(parseInt(arrCuota[0].moncuo)));
 
 
