@@ -43,6 +43,21 @@
                       </select>
                     </div>
 
+                    <div class="col-lg-12">
+                      <label class="col-form-label"></i> Ciudad (*): </label>
+                      <input type="text" name="txtCiuCli" id="txtCiuCli" class="form-control" required>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <label class="col-form-label"></i> Dirección (*): </label>
+                      <input type="text" name="txtDirCli" id="txtDirCli" class="form-control" required>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <label class="col-form-label"></i> Barrio (*): </label>
+                      <input type="text" name="txtBarCli" id="txtBarCli" class="form-control" required>
+                    </div>
+
 
                   </div>
                   <div class="card-footer">

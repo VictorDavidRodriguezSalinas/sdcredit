@@ -7,6 +7,9 @@ $nomcli = (isset($_POST['txtNomCli'])) ? $_POST['txtNomCli'] : '';
 $apecli = (isset($_POST['txtApeCli'])) ? $_POST['txtApeCli'] : '';
 $telcli = (isset($_POST['txtTelCli'])) ? $_POST['txtTelCli'] : '';
 $idusuario = (isset($_POST['dtcUSU'])) ? $_POST['dtcUSU'] : '';
+$ciucli = (isset($_POST['txtCiuCli'])) ? $_POST['txtCiuCli'] : '';
+$dircli = (isset($_POST['txtDirCli'])) ? $_POST['txtDirCli'] : '';
+$barcli = (isset($_POST['txtBarCli'])) ? $_POST['txtBarCli'] : '';
 
 
 $usuario =(isset($_SESSION['nomusu'])) ? $_SESSION['nomusu'] : '';
@@ -24,7 +27,7 @@ if ($ope == 'ELI') :
 		);
 		echo json_encode($arr, JSON_FORCE_OBJECT);
 	else :
-		$texto = "'$idcli'," . "'$ruccli'," . "'$nomcli'," . "'$apecli'," . "'$telcli'," . "'$ope'";
+		$texto = "'$idcli'," . "'$ruccli'," . "'$nomcli'," . "'$apecli'," . "'$telcli'," . "'$ciucli',". "'$dircli',". "'$barcli',". "'$ope'";
 		$cli = new Metodo();
 		$reg = $cli->Insertar($texto, 'man_cliente');
 		$arr = array(
