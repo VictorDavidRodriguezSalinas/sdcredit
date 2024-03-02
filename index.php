@@ -73,6 +73,7 @@ $fechaActual = date("d-m-Y");
   <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="tablemax.css">
 
   <style type="text/css">
 /* Estilo personalizado para imprimir el footer */
@@ -81,6 +82,8 @@ $fechaActual = date("d-m-Y");
     display: table-row-group; /* Asegura que el footer se muestre en la impresión */
   }
 }
+
+
 
 </style>
 

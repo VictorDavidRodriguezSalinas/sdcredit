@@ -1,3 +1,8 @@
+
+
+
+</style>
+
 <form id="frmLisCierreCaja" method="POST" action="">
 	<input type="text" name="txtidusu" id="txtidusu" class="form-control" value="<?php echo $_SESSION['idusu']; ?>" hidden>
 	<input type="text" name="txtnivusu" id="txtnivusu" class="form-control" value="<?php echo $_SESSION['nivusu']; ?>" hidden>
@@ -15,19 +20,21 @@
 								</div>
 								<div class="card-body">
 									<div class="table table-bordered">
+									
 										<table id="tabEstado" name="tabEstado" class="table table-bordered table-striped">
 											<thead>
 												<th>Nº Pagaré</th>
-												<th>Ruc</th>
 												<th>Razón Social</th>
 												<th>Nº Cuota</th>
-												<th>Vencimiento</th>
-												<th>Monto cuota</th>
-												<th>Atraso días</th>
+												<th>Estado</th>
+												<th>Vence</th>
+												<th>Monto</th>
+												<th>Atraso</th>
 												<th>Interés </th>
 												<th>Cobrado </th>
 												<th>A Cobrar</th>
-												<th>Estado</th>
+												<th>Exonerado</th>
+												<th>Ruc</th>
 
 
 											</thead>
@@ -47,6 +54,7 @@
 													<th id="totInteres"></th>
 													<th id="totCobrado"></th>
 													<th id="totSaldo"></th>
+													<th id="totExonera"></th>
 													<th></th>
 												</tr>
 											</tfoot>

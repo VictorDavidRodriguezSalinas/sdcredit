@@ -1,0 +1,12 @@
+.fixed-size-table {
+    width: 100%; /* Ancho de la tabla al 100% del contenedor */
+    table-layout: fixed; /* Fijar el ancho de las columnas */
+}
+
+.fixed-size-table td,
+.fixed-size-table th {
+    width: auto; /* Ancho automático de las celdas */
+    white-space: nowrap; /* Evitar el salto de línea en el contenido de las celdas */
+    overflow: hidden; /* Ocultar contenido que se desborde */
+    text-overflow: ellipsis; /* Agregar puntos suspensivos (...) para indicar que hay más contenido oculto */
+}

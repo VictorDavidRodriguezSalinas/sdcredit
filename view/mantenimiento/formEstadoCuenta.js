@@ -11,7 +11,7 @@ $(document).ready(function () {
         let sumaColumna7 = 0;
         let sumaColumna8 = 0;
         let sumaColumna9 = 0;
-
+        let sumaColumna10 = 0;
         table.column(7, { search: 'applied' }).data().each(function (value) {
             sumaColumna7 += parseInt(value) || 0;
         });
@@ -23,17 +23,22 @@ $(document).ready(function () {
         table.column(9, { search: 'applied' }).data().each(function (value) {
             sumaColumna9 += parseInt(value) || 0;
         });
+        table.column(10, { search: 'applied' }).data().each(function (value) {
+            sumaColumna10 += parseInt(value) || 0;
+        });
+
 
         // console.log("Suma de Cobrado 1: " + sumaColumna1);
         // console.log("Suma de A Cobrar 2: " + sumaColumna2);
         const thtotInteres = document.getElementById("totInteres");
         const thtotCobrado = document.getElementById("totCobrado");
         const thtotSaldo = document.getElementById("totSaldo");
-
+        const thtotExonera = document.getElementById("totExonera");
   
         thtotInteres.textContent = formatearNumero(sumaColumna7);
         thtotCobrado.textContent = formatearNumero(sumaColumna8);
         thtotSaldo.textContent = formatearNumero(sumaColumna9);
+        thtotExonera.textContent = formatearNumero(sumaColumna10);
     }
 
     // Escucha el evento 'draw.dt' para calcular la suma después de cada búsqueda o cambio de datos
@@ -77,16 +82,17 @@ function listCuotas() {
         },
         "columns": [
             { "data": "numpgr" },
-            { "data": "ruccli" },
             { "data": "razcli" },
             { "data": "numcuo" },
+            { "data": "estado" },
             { "data": "fecven" },
             { "data": "moncuo", render: $.fn.dataTable.render.number('.', ',', 0) },
             { "data": "dias_atraso" },
             { "data": "intacu", render: $.fn.dataTable.render.number('.', ',', 0) },
             { "data": "pagcuo", render: $.fn.dataTable.render.number('.', ',', 0) },
             { "data": "monpag", render: $.fn.dataTable.render.number('.', ',', 0) },
-            { "data": "estado" }
+            { "data": "exonera", render: $.fn.dataTable.render.number('.', ',', 0) },
+            { "data": "ruccli" }
         ],
         language: {
             "lengthMenu": "Mostrar _MENU_ registros",
