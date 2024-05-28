@@ -1,8 +1,6 @@
 
 
 
-</style>
-
 <form id="frmLisCierreCaja" method="POST" action="">
 	<input type="text" name="txtidusu" id="txtidusu" class="form-control" value="<?php echo $_SESSION['idusu']; ?>" hidden>
 	<input type="text" name="txtnivusu" id="txtnivusu" class="form-control" value="<?php echo $_SESSION['nivusu']; ?>" hidden>
@@ -35,6 +33,7 @@
 												<th>A Cobrar</th>
 												<th>Exonerado</th>
 												<th>Ruc</th>
+												
 
 
 											</thead>
@@ -56,6 +55,7 @@
 													<th id="totSaldo"></th>
 													<th id="totExonera"></th>
 													<th></th>
+												
 												</tr>
 											</tfoot>
 										</table>

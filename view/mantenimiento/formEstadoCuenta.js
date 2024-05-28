@@ -63,10 +63,8 @@ function formatearNumero(tot){
 
 function listCuotas() {
 
-
     idusuario = document.getElementById("txtidusu").value;
     nivusu = document.getElementById("txtnivusu").value;
-
     procedure = "lis_estadocuenta";
     $.fn.dataTable.ext.errMode = 'throw';
     tablaEstado = $('#tabEstado').DataTable({
@@ -93,6 +91,12 @@ function listCuotas() {
             { "data": "monpag", render: $.fn.dataTable.render.number('.', ',', 0) },
             { "data": "exonera", render: $.fn.dataTable.render.number('.', ',', 0) },
             { "data": "ruccli" }
+            ,
+            // { 
+            //     "data": null,
+            //     "defaultContent": '<button class="btn btn-primary btn-pdf">Generar PDF</button>',
+            //     "orderable": false
+            // }
         ],
         language: {
             "lengthMenu": "Mostrar _MENU_ registros",
@@ -147,8 +151,33 @@ function listCuotas() {
             },
         ]
     });
+   
+    // $('#tabEstado tbody').on('click', '.btn-pdf', function() {
+    //     event.preventDefault();
+    //     var data = tablaEstado.row($(this).parents('tr')).data();
+    //     console.log(data);
+    //     generatePDF(data);
+    // });
+}
 
+function generatePDF(data) {
+    var formData = new FormData();
+     formData.append('ruccli', data.ruccli);
+   
+   
 
+    fetch('controller/notificacion.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.blob())
+    .then(blob => {
+        var url = URL.createObjectURL(blob);
+        var pdfWindow = window.open(url, '_blank');
+        pdfWindow.onload = function() {
+            pdfWindow.print();
+        };
+    });
 }
 
 function cambiarColorColumna(){

@@ -1,8 +1,29 @@
+
+
+<style>
+.btn-pdf {
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Mejora la usabilidad en pantallas táctiles */
+@media (max-width: 768px) {
+    .btn-pdf {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+</style>
 <form id="frmLisCierreCaja" method="POST" action="">
 	<input type="text" name="txtidusu" id="txtidusu" class="form-control" value="<?php echo $_SESSION['idusu']; ?>" hidden>
 	<input type="text" name="txtnivusu" id="txtnivusu" class="form-control" value="<?php echo $_SESSION['nivusu']; ?>" hidden>
 
-	<body  class="">
+	<body class="">
 		<div class="align-content-center">
 			<section class="content">
 				<div class="container-fluid">
@@ -24,16 +45,13 @@
 												<th>Vencimiento</th>
 												<th>Monto cuota</th>
 												<th>Atraso días</th>
-												<th>Interés </th>
-												<th>Cobrado </th>
+												<th>Interés</th>
+												<th>Cobrado</th>
 												<th>A Cobrar</th>
 												<th>Estado</th>
-
-
+												<th>Imprimir</th> <!-- Nueva columna para el botón Imprimir -->
 											</thead>
 											<tbody>
-												
-
 											</tbody>
 											<tfoot>
 												<tr>
@@ -48,9 +66,11 @@
 													<th id="totCobrado"></th>
 													<th id="totSaldo"></th>
 													<th></th>
+													<th></th> <!-- Nueva columna para el total de Imprimir -->
 												</tr>
 											</tfoot>
 										</table>
+
 									</div>
 								</div>
 
