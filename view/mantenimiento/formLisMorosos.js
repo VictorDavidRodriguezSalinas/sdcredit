@@ -176,7 +176,7 @@ function listCuotas() {
             { "data": "estado" },
             {
                 "data": null,
-                "defaultContent": '<button class="btn btn-primary btn-pdf">Generar PDF</button>',
+                "defaultContent": '<button class="btn btn-danger btn-pdf">Notificar</button>',
                 "orderable": false
             }
         ],

@@ -22,18 +22,20 @@
 										<table id="tabEstado" name="tabEstado" class="table table-bordered table-striped">
 											<thead>
 												<th>Nº Pagaré</th>
+												<th>Ruc</th>
 												<th>Razón Social</th>
 												<th>Nº Cuota</th>
-												<th>Estado</th>
 												<th>Vence</th>
 												<th>Monto</th>
 												<th>Atraso</th>
 												<th>Interés </th>
 												<th>Cobrado </th>
 												<th>A Cobrar</th>
+												<th>Estado</th>
 												<th>Exonerado</th>
-												<th>Ruc</th>
 												
+												
+			
 
 
 											</thead>
@@ -53,8 +55,9 @@
 													<th id="totInteres"></th>
 													<th id="totCobrado"></th>
 													<th id="totSaldo"></th>
-													<th id="totExonera"></th>
 													<th></th>
+													<th id="totExonera"></th>
+													
 												
 												</tr>
 											</tfoot>

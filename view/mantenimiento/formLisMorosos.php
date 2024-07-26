@@ -90,7 +90,7 @@
 		<script src="assets/popper/popper.min.js"></script>
 		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="assets/datatables/datatables.min.js"></script>
-		<script type="text/javascript" src="view/mantenimiento/formLisMorosos.js"></script>
+		<script type="text/javascript" src="view/mantenimiento/formLisMorosos.js?v=28052024"></script>
 
 	</body>
 </form>

@@ -25,7 +25,10 @@ function listCliente() {
 			
 			{ "data": "idcli" },
 		
-			{"defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-warning btn-sm btnEditar'><i class='fas fa-user-edit'></i>Editar</button></div></div>"},
+			{
+				"defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-warning btn-sm btnEditar'><i class='fas fa-user-edit'></i>Editar</button><button class='btn btn-danger btn-sm btnEliminar'><i class='fas fa-trash'></i>Eliminar</button></div></div>"
+       
+			},
        
 			{ "data": "ruccli" },
 			{ "data": "nomcli" },
@@ -156,7 +159,7 @@ $(document).on("click", ".btnEditar", function (e) {
 
 });
 
-$(document).on("click", ".btnBorrar", function (e) {
+$(document).on("click", ".btnEliminar", function (e) {
 
 	e.preventDefault();
 	swal({
@@ -180,9 +183,10 @@ $(document).on("click", ".btnBorrar", function (e) {
 					type: 'POST',
 					data: { txtidcli: idcli, txtOPE: opera },
 					success: function (res) {
+						console.log(res);
 
 						var js = JSON.parse(res);
-						// console.log((js.estado));
+						
 						if (js.estado == 'no') {
 
 							swal({ title: "El cliente ya posee cuotas, no puede ser eliminado", text: "", icon: "warning", timer: "1500", });

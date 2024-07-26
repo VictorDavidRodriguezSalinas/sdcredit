@@ -30,17 +30,17 @@ $usuario =(isset($_SESSION['nomusu'])) ? $_SESSION['nomusu'] : '';
 
 
 if ($ope == 'ELI') :
-	$Cn = new Conexion();
-	$sql = "SELECT * FROM cuotas WHERE idcli='$idcli'";
-	$query = $Cn->query($sql);
-	$fil = $query->num_rows;
-	if ($fil > 0) :
-		$arr = array(
-			'estado' => 'no'
-		);
-		echo json_encode($arr, JSON_FORCE_OBJECT);
-	else :
-	$texto = "'$idcli'," . "'$ruccli'," . "'$nomcli'," . "'$apecli'," . "'$telcli'," ."'$idusuario'," . "'$ciucli',". "'$dircli',". "'$barcli',". "'$refcli1',". "'$refcli2',". "'$ope'";
+	// $Cn = new Conexion();
+	// $sql = "SELECT * FROM cuotas WHERE idcli='$idcli'";
+	// $query = $Cn->query($sql);
+	// $fil = $query->num_rows;
+	// if ($fil > 0) :
+	// 	$arr = array(
+	// 		'estado' => 'no'
+	// 	);
+	// 	echo json_encode($arr, JSON_FORCE_OBJECT);
+	//else :
+	$texto = "'$idcli'," . "'$ruccli'," . "'$nomcli'," . "'$apecli'," . "'$telcli'," ."'1'," . "'$ciucli',". "'$dircli',". "'$barcli',". "'$refcli1',". "'$refcli2',". "'$ope'";
 
 		$cli = new Metodo();
 		$reg = $cli->Insertar($texto, 'man_cliente');
@@ -50,7 +50,7 @@ if ($ope == 'ELI') :
 		);
 		echo json_encode($arr, JSON_FORCE_OBJECT);
 
-	endif;
+	//endif;
 
 elseif ($ope=='GUA') :
 

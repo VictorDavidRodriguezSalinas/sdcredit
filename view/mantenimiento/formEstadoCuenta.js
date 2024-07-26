@@ -23,7 +23,7 @@ $(document).ready(function () {
         table.column(9, { search: 'applied' }).data().each(function (value) {
             sumaColumna9 += parseInt(value) || 0;
         });
-        table.column(10, { search: 'applied' }).data().each(function (value) {
+        table.column(11, { search: 'applied' }).data().each(function (value) {
             sumaColumna10 += parseInt(value) || 0;
         });
 
@@ -61,8 +61,100 @@ function formatearNumero(tot){
 }
 
 
-function listCuotas() {
+// function listCuotas() {
 
+//     idusuario = document.getElementById("txtidusu").value;
+//     nivusu = document.getElementById("txtnivusu").value;
+//     procedure = "lis_estadocuenta";
+//     $.fn.dataTable.ext.errMode = 'throw';
+//     tablaEstado = $('#tabEstado').DataTable({
+//         "paging": true,
+//         "ordering": true,
+//         "info": false,
+//         "bFilter": true,
+//         "ajax": {
+//             "url": "controller/listarProcedure.php",
+//             "method": 'POST', //usamos el metodo POST
+//             "data": { param: "'" + idusuario + "'," + "'" + nivusu + "'", procedure: procedure }, //enviamos opcion 4 para que haga un SELECT
+//             "dataSrc": ""
+//         },
+//         "columns": [
+//             { "data": "numpgr" },
+//             { "data": "razcli" },
+//             { "data": "numcuo" },
+//             { "data": "estado" },
+//             { "data": "fecven" },
+//             { "data": "moncuo", render: $.fn.dataTable.render.number('.', ',', 0) },
+//             { "data": "dias_atraso" },
+//             { "data": "intacu", render: $.fn.dataTable.render.number('.', ',', 0) },
+//             { "data": "pagcuo", render: $.fn.dataTable.render.number('.', ',', 0) },
+//             { "data": "monpag", render: $.fn.dataTable.render.number('.', ',', 0) },
+//             { "data": "exonera", render: $.fn.dataTable.render.number('.', ',', 0) },
+//             { "data": "ruccli" }
+//             ,
+//         ],
+//         language: {
+//             "lengthMenu": "Mostrar _MENU_ registros",
+//             "zeroRecords": "No se encontraron resultados",
+//             "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+//             "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+//             "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+//             "sSearch": "Buscar:",
+//             "oPaginate": {
+//                 "sFirst": "Primero",
+//                 "sLast": "Último",
+//                 "sNext": "Siguiente",
+//                 "sPrevious": "Anterior"
+//             },
+//             "sProcessing": "Procesando...",
+//         },
+//         "responsive": true,
+//         "autoWidth": false,
+//         dom: 'Bfrtip',
+//         buttons: [
+//             {
+//                 extend: 'excelHtml5',
+//                 text: '<i class="fas fa-file-excel"></i> ',
+//                 titleAttr: 'Exportar a Excel',
+//                 className: 'btn btn-success',
+//                 filename: 'EstadoCuenta',
+//                 title: 'Estado de cuenta',
+//                 footer:true,
+//             },
+//             {
+//                 extend: 'pdfHtml5',
+//                 text: '<i class="fas fa-file-pdf"></i> ',
+//                 titleAttr: 'Exportar a PDF',
+//                 className: 'btn btn-danger',
+//                 filename: 'EstadoCuenta',
+//                 title: 'Estado de cuenta',
+//                 footer:true,
+//             },
+//             {
+//                 extend: 'print',
+//                 text: '<i class="fa fa-print"></i> ',
+//                 titleAttr: 'Imprimir',
+//                 className: 'btn btn-info',
+//                 filename: 'EstadoCuenta',
+//                 title: 'Estado de cuenta',
+//                 footer:true,
+//                 customize: function(win) {
+//                     // Personaliza la vista de impresión
+//                     $(win.document.body).addClass('horizontal-print'); // Agrega una clase CSS para la impresión horizontal
+//                   },
+                
+//             },
+//         ]
+//     });
+   
+//     // $('#tabEstado tbody').on('click', '.btn-pdf', function() {
+//     //     event.preventDefault();
+//     //     var data = tablaEstado.row($(this).parents('tr')).data();
+//     //     console.log(data);
+//     //     generatePDF(data);
+//     // });
+// }
+function listCuotas() {
     idusuario = document.getElementById("txtidusu").value;
     nivusu = document.getElementById("txtnivusu").value;
     procedure = "lis_estadocuenta";
@@ -80,23 +172,18 @@ function listCuotas() {
         },
         "columns": [
             { "data": "numpgr" },
+            { "data": "ruccli" },
             { "data": "razcli" },
             { "data": "numcuo" },
-            { "data": "estado" },
             { "data": "fecven" },
             { "data": "moncuo", render: $.fn.dataTable.render.number('.', ',', 0) },
             { "data": "dias_atraso" },
             { "data": "intacu", render: $.fn.dataTable.render.number('.', ',', 0) },
             { "data": "pagcuo", render: $.fn.dataTable.render.number('.', ',', 0) },
             { "data": "monpag", render: $.fn.dataTable.render.number('.', ',', 0) },
-            { "data": "exonera", render: $.fn.dataTable.render.number('.', ',', 0) },
-            { "data": "ruccli" }
-            ,
-            // { 
-            //     "data": null,
-            //     "defaultContent": '<button class="btn btn-primary btn-pdf">Generar PDF</button>',
-            //     "orderable": false
-            // }
+			{ "data": "estado" },
+            { "data": "exonera", render: $.fn.dataTable.render.number('.', ',', 0) }
+           
         ],
         language: {
             "lengthMenu": "Mostrar _MENU_ registros",
@@ -124,7 +211,7 @@ function listCuotas() {
                 className: 'btn btn-success',
                 filename: 'EstadoCuenta',
                 title: 'Estado de cuenta',
-                footer:true,
+                footer: true,
             },
             {
                 extend: 'pdfHtml5',
@@ -133,7 +220,18 @@ function listCuotas() {
                 className: 'btn btn-danger',
                 filename: 'EstadoCuenta',
                 title: 'Estado de cuenta',
-                footer:true,
+                footer: true,
+                orientation: 'landscape', // Establecer orientación horizontal
+                pageSize: 'A4', // Ajustar tamaño de página a A4
+                // exportOptions: {
+                //     columns: ':visible' // Exportar solo columnas visibles
+                // },
+                customize: function (doc) {
+                    // Ajustar automáticamente el ancho de las columnas
+                    doc.content[1].table.widths = doc.content[1].table.body[0].map(function (header) {
+                        return '*';
+                    });
+                }
             },
             {
                 extend: 'print',
@@ -142,16 +240,15 @@ function listCuotas() {
                 className: 'btn btn-info',
                 filename: 'EstadoCuenta',
                 title: 'Estado de cuenta',
-                footer:true,
-                customize: function(win) {
+                footer: true,
+                customize: function (win) {
                     // Personaliza la vista de impresión
                     $(win.document.body).addClass('horizontal-print'); // Agrega una clase CSS para la impresión horizontal
-                  },
-                
+                },
             },
         ]
     });
-   
+
     // $('#tabEstado tbody').on('click', '.btn-pdf', function() {
     //     event.preventDefault();
     //     var data = tablaEstado.row($(this).parents('tr')).data();
